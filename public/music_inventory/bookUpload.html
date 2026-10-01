@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="font/fontawesome/css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"> 
+    <!-- Tagsinput Css -->
+    <link rel="stylesheet" href="css/bootstrap-tagsinput.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+
+    <!-- banner part start -->
+    <section class="profile-banner">
+        <div class="profile-banner__container">
+            <br><div class="profile__cover"> 
+                <div class="photo">
+                    <label for="profile">
+                        <div class="profile_image">
+                            <img src="images/My_profile.jpg" alt="">  
+                        </div> 
+                        <input type="file" id="profile"><i class="fas fa-camera"></i>
+                    </label>
+                </div>
+                <div class="cover_upload">
+                    <input type="file" id="cover_phpto"><label for="cover_phpto"><i class="fas fa-camera me-sm-2 mx-auto"></i><span class="d-sm-inline d-none">Edit cover Photo</span></label>
+                </div>
+            </div>
+            <div class="profile_text">
+                <h2 class="name">New Instrument</h2>
+                <div class="profile_text_edit-still" id="profile_edit_button">
+                    <p class="bio">I am an imran khan</p>
+                    <button class="edit_button btn btn-primary" onclick="show_edit_form()">Edit</button>
+                </div>
+                <div class="profile_text_edit-form d-none" id="profile_edit_form">
+                    <textarea name="" id="" class="form-control">If I learn something new as soon as I wake up in the morning, then my whole day is spent in great joy.</textarea>
+                    <p>22 characters remaining</p>
+                    <div class="profile_text_edit-form_button">
+                        <button class="cancel_button btn btn-primary" onclick="show_edit_button_container()">cancel</button>
+                        <button class="save_button btn btn-primary" onclick="show_edit_button_container()">Save</button>
+                    </div>
+                </div>  
+            </div>
+            <hr>
+            <!-- menu start-->
+            <nav class="navbarMenu"> 
+                <div class="navContainer stikey_container" id="">
+                    <ul class="custom_menu">
+                        <li><a href="profile.html" class="menu-item">posts</a></li>
+                        <li><a href="edit_details.html" class="menu-item">about</a></li>
+                        <li><a href="friends.html" class="menu-item">friends</a></li>
+                        <li><a href="bookUpload.html" class="menu-item">books</a></li>
+                        <li><a href="#" class="menu-item">photos</a></li>
+                     </ul>
+                     <div class="menu_button">
+                         <a href="bookUpload.html" class="add_to_book"><i class="fas fa-plus-circle"></i>Add New Book</a>
+                         <a href="edit_profile.html" class="edit_profile"><i class="fas fa-pen"></i>Edit Profile</a> 
+                     </div>
+                </div> 
+            </nav>
+            <!-- menu end-->
+
+        </div>
+    </section>
+    <!-- banner part end -->
+ 
+
+    <!-- Main content section start -->
+    <section class="main_content">
+        <div class="main_container"> 
+            <div class="book_upload_form">
+                <div class="upload_form_title text-center mb-3">
+                    <h2>Please fill out the form below to add a new book.</h2>
+                </div>
+                <form action="">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="upload_left_input">
+                                <div class="writers_name">
+                                    <div class="writers_name_input">
+                                        <input class="form-control name_input" onkeydown="suggestion_box()" onblur="removeSuggestionBox()" id="name_input" placeholder="Instrument" type="text">
+                                        <div class="name_suggestion d-none" id="name_suggestion">
+                                            <ul>
+                                                <li>A Minhaz</li>
+                                                <li>A person named Saidul</li>
+                                                <li>Hasan Al-Banna</li>
+                                                <li>Fazail ibn Kawthar</li>
+                                                <li>Moktar's brother</li>
+                                                <li>Abdullah Al-Amin</li>
+                                                <li>Ruhul Amin Habib Khan</li>
+                                                <li>Moktar's brother</li>
+                                                <li>Abdullah Al-Amin</li>
+                                                <li>রুহুল আমিন হাবিব খান</li>
+                                                <li>মোক্তার ভাই</li>
+                                                <li>আব্দুল্লাহ আল-আমিন</li>
+                                                <li>রুহুল আমিন হাবিব খান</li>
+                                                <li>মোক্তার ভাই</li>
+                                                <li>আব্দুল্লাহ আল-আমিন</li>
+                                                <li>রুহুল আমিন হাবিব খান</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="publishers_name">
+                                    <div class="publishers_name_input">
+                                        <input class="form-control name_input" onkeydown="publication_suggestion_box()" onblur="remove_publication_suggestionBox()" id="publication_input" placeholder="Name of the publication" type="text">
+                                        <div class="name_suggestion d-none" id="publication_suggestion">
+                                            <ul>
+                                                <li>A Minhaz</li>
+                                                <li>A person named Saidul</li>
+                                                <li>Hasan Al-Banna</li>
+                                                <li>ফোজায়েল ইবনে কাওসার</li>
+                                                <li>মোক্তার ভাই</li>
+                                                <li>আব্দুল্লাহ আল-আমিন</li>
+                                                <li>রুহুল আমিন হাবিব খান</li>
+                                                <li>মোক্তার ভাই</li>
+                                                <li>আব্দুল্লাহ আল-আমিন</li>
+                                                <li>রুহুল আমিন হাবিব খান</li>
+                                                <li>মোক্তার ভাই</li>
+                                                <li>আব্দুল্লাহ আল-আমিন</li>
+                                                <li>রুহুল আমিন হাবিব খান</li>
+                                                <li>মোক্তার ভাই</li>
+                                                <li>আব্দুল্লাহ আল-আমিন</li>
+                                                <li>রুহুল আমিন হাবিব খান</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input class="form-control" placeholder="Name of the translator" type="text">
+                                <input class="form-control" placeholder="Version" type="text">
+                                <input class="form-control" placeholder="ISBN" type="text">
+                                <input class="form-control" placeholder="Total pages" type="text">
+                                <select class="form-select">
+                                    <option ‍selected disabled>Select a language</option>
+                                    <option>English</option>
+									<option>Bengali</option>
+                                    <option>Arabic</option>
+                                    <option>Urdu</option>
+                                    <option>Persian</option>
+                                    <option>Others</option>
+                                </select>
+                                <input class="form-control" placeholder="Category" type="text">
+                                <div class="tagAdd">
+                                    <input class="" placeholder="Tag" type="text" data-role="tagsinput">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="upload_right_input">
+                                <input class="form-control" placeholder="Book title" type="text">
+                                <input class="form-control" placeholder="Sub-title of the book" type="text">
+                                <input class="form-control" placeholder="Banglish Title" type="text">
+                                <textarea class="form-control" placeholder="Details" rows="3"></textarea>
+                                <input class="form-control" placeholder="Cover photo" type="file">
+                                <input class="form-control" placeholder="Video URL" type="url">
+                                <input class="form-control" placeholder="Drive link" type="url">
+                                <div class="submit_btn">
+                                    <input class="btn btn-primary" type="submit" value="Upload">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Main content section end -->
+
+    <div class="margin_bottom"></div>
+
+
+         
+     
+
+    <!-- jQuery js -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Tagsinput JS -->
+    <script src="js/bootstrap-tagsinput.min.js"></script>
+
+    <!-- Custom js -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
