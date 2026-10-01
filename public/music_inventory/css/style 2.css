@@ -1,0 +1,151 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Library management
+    Template URL: http://www.something.com
+    Description: Inventry related site.
+    Author: DU WEB TEAM
+    Author URI: #
+    License: GNU General Public License version 3.0
+    License URI: http://www.gnu.org/licenses/gpl-3.0.html
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+    1. Typography
+    2. Header Area
+        2.1 Menu Area
+        2.2 Welcome Text
+        2.3 Social Media
+    3. Getting Started
+    4. Design Area
+    5. Community Area
+    6. Subscribe Area
+    7. Download Area
+    8. Footer Area
+
+-----------------------------------------------------------------------------------*/
+
+:root {
+    --bg: #0f172a;
+    --panel: #111827;
+    --accent: #38bdf8;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --hover: #1f2937;
+    --active: #0ea5e9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
+    background: linear-gradient(180deg, #0b1220, #0f172a 25%, #0f172a 75%, #0b1220);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--panel);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+header {
+    margin-bottom: 16px;
+}
+
+.cover {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    background: radial-gradient(60% 60% at 40% 40%, rgba(56,189,248,.3), transparent 60%), linear-gradient(135deg, #0b1220, #0f172a);
+    border: 1px solid rgba(255,255,255,.06);
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.artist {
+    color: var(--muted);
+    font-size: .95rem;
+    margin-bottom: 6px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.play-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,.08);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    background: var(--hover);
+}
+
+.bar {
+    height: 6px;
+    flex: 1;
+    background: #0a1220;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+    .bar > div {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, var(--accent), var(--active));
+    }
+
+.playlist {
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+    .track + .track {
+        border-top: 1px solid rgba(255,255,255,.06);
+    }
+
+    .track:hover {
+        background: var(--hover);
+    }
+
+    .track.active {
+        background: linear-gradient(90deg, rgba(56,189,248,.08), rgba(14,165,233,.06));
+    }
+
+.title {
+    font-weight: 600;
+}
+
+.duration {
+    color: var(--muted);
+}
