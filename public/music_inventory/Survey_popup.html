@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exit Survey</title>
+    <style>
+        #surveyPopup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        #surveyPopup h2 {
+            margin-top: 0;
+        }
+        #surveyPopup button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="surveyPopup">
+        <h2>We value your feedback!</h2>
+        <form id="surveyForm">
+            <label for="experience">1. How was your experience visiting the site?</label><br>
+            <textarea id="experience" name="experience" rows="3" cols="30"></textarea><br><br>
+            <label for="answers">2. Did you find the answers you were looking for?</label><br>
+            <textarea id="answers" name="answers" rows="3" cols="30"></textarea><br><br>
+            <label for="improvement">3. What could be done better?</label><br>
+            <textarea id="improvement" name="improvement" rows="3" cols="30"></textarea><br><br>
+            <label for="subscription">4. Why did you not subscribe or try the service?</label><br>
+            <textarea id="subscription" name="subscription" rows="3" cols="30"></textarea><br><br>
+            <button type="button" onclick="submitSurvey()">Submit</button>
+            <button type="button" onclick="closeSurvey()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        window.addEventListener('beforeunload', function (event) {
+            event.preventDefault();
+            event.returnValue = '';
+            document.getElementById('surveyPopup').style.display = 'block';
+        });
+
+        function submitSurvey() {
+            const surveyData = {
+                experience: document.getElementById('experience').value,
+                answers: document.getElementById('answers').value,
+                improvement: document.getElementById('improvement').value,
+                subscription: document.getElementById('subscription').value
+            };
+            console.log('Survey Data:', surveyData);
+            closeSurvey();
+        }
+
+        function closeSurvey() {
+            document.getElementById('surveyPopup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

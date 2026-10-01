@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedals</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="font/fontawesome/css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"> 
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+
+    <!-- banner part start -->
+    <section class="profile-banner">
+        <div class="profile-banner__container">
+            <br><div class="profile__cover"> 
+                <div class="photo">
+                    <label for="profile">
+                        <div class="profile_image">
+                            <img src="images/my_profile.jpg" alt="">  
+                        </div> 
+                        <input type="file" id="profile"><i class="fas fa-camera"></i>
+                    </label>
+                </div>
+                <div class="cover_upload">
+                    <input type="file" id="cover_phpto">
+                    <label for="cover_phpto">
+                         <i class="fas fa-camera me-sm-2 mx-auto"></i> 
+                         <span class="d-sm-inline d-none">Edit cover Photo</span> 
+                    </label>
+                </div>
+            </div>
+            <div class="profile_text">
+                <h2 class="name">Larme</h2>
+                <div class="profile_text_edit-still" id="profile_edit_button">
+                    <p class="bio">Pedals Inventory</p>
+                    <button class="edit_button btn btn-primary" onclick="show_edit_form()">List</button>
+                </div>
+                <div class="profile_text_edit-form d-none" id="profile_edit_form">
+                    <textarea name="" id="" class="form-control">If I learn something new in the morning after waking up, then my whole day passes in great joy.</textarea>
+                    <p>22 characters remaining</p>
+                    <div class="profile_text_edit-form_button">
+                        <button class="cancel_button btn btn-primary" onclick="show_edit_button_container()">Cancel</button>
+                        <button class="save_button btn btn-primary" onclick="show_edit_button_container()">Save</button>
+                    </div>
+                </div>  
+            </div>
+            <hr>
+            <!-- menu start-->
+            
+            <nav class="navbarMenu"> 
+                  <div class="navContainer" id="">
+                    <ul class="custom_menu">
+					    <li><a href="index.html" class="menu-item">Home</a></li>
+			        <li><a href="profile.html" class="menu-item">profile</a></li>
+                    <li><a href="media_gallery.html" class="menu-item">Gallery</a></li>
+			        <li><a href="general_elements.html" class="menu-item">Manuals</a></li>
+                     </ul>
+                     <div class="menu_button">
+                         <a href="bookUpload.html" class="add_to_book"><i class="fas fa-plus-circle"></i>Add New Book</a>
+                         <a href="edit_profile.html" class="edit_profile"><i class="fas fa-pen"></i>Edit Profile</a> 
+                     </div>
+                  </div> 
+              </nav>
+           
+            <!-- menu end-->
+
+        </div>
+    </section>
+    <!-- banner part end -->
+
+
+    <!-- Main content section start -->
+    <section class="main_content">
+        <div class="main_container">
+            <div class="friends_part">
+                <div class="friends_header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>My Pedal stack</h2>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group w-75 mx-auto mb-3">
+                                <input type="text" class="form-control" placeholder="look for pedal" aria-label="Username" aria-describedby="basic-addon1">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="all_friends">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="single_friend">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="profile_image">
+                                            <a href="#">
+                                                <img src="images/pedals/boss_logo.jpg" alt="Profile Picture">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="friend_name">
+                                            <a href="boss.html" >Boss</a>
+                                            <p>Pedals</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                       <div class="friend_dots">
+                                        <a href="#">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </a>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single_friend">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="profile_image">
+                                            <a href="#">
+                                                <img src="images/logo/mxr.jpg" alt="Profile Picture">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="friend_name">
+                                            <a href="mxr.html">MXR</a>
+                                            <p>Pedals</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                       <div class="friend_dots">
+                                        <a href="#">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </a>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single_friend">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="profile_image">
+                                            <a href="#">
+                                                <img src="images/logo/TCElectronic.png" alt="Profile Picture">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="friend_name">
+                                            <a href="tc_electronic.html">TC Electronic</a>
+                                            <p>Pedals</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                       <div class="friend_dots">
+                                        <a href="#">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </a>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single_friend">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="profile_image">
+                                            <a href="#">
+                                                <img src="images/logo/rocktron.jpg" alt="Profile Picture">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="friend_name">
+                                            <a href="rocktron.html">Rocktron</a>
+                                            <p>Pedals</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                       <div class="friend_dots">
+                                        <a href="#">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </a>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single_friend">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="profile_image">
+                                            <a href="#">
+                                                <img src="images/logo/line6.png" alt="Profile Picture">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="friend_name">
+                                            <a href="line6.html">Line 6</a>
+                                            <p>Pedals</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                       <div class="friend_dots">
+                                        <a href="#">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </a>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single_friend">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="profile_image">
+                                            <a href="#">
+                                                <img src="images/logo/blackstar.jpg" alt="Profile Picture">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="friend_name">
+                                            <a href="blackstar.html">Blackstar</a>
+                                            <p>Pedals</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                       <div class="friend_dots">
+                                        <a href="blackstar">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </a>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single_friend">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="profile_image">
+                                            <a href="#">
+                                                <img src="images/logo/pedals.jpg" alt="Profile Picture">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="friend_name">
+                                            <a href="other_pedals.html">Others Pedals</a>
+                                            <p> pedals</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                       <div class="friend_dots">
+                                        <a href="#">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </a>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single_friend">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="profile_image">
+                                            <a href="#">
+                                                <img src="images/logo/ibanez.jpg" alt="Profile Picture">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="friend_name">
+                                            <a href="ibanez.html">Ibanez</a>
+                                            <p>Pedals</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                       <div class="friend_dots">
+                                        <a href="#">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </a>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single_friend">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="profile_image">
+                                            <a href="#">
+                                                <img src="images/logo/dunlop.jpg" alt="Profile Picture">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="friend_name">
+                                            <a href="dunlop.html">Dunlop</a>
+                                            <p>Pedals</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                       <div class="friend_dots">
+                                        <a href="#">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </a>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single_friend">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="profile_image">
+                                            <a href="#">
+                                                <img src="images/logo/mooer.jpg" alt="Profile Picture">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="friend_name">
+                                            <a href="mooer.html">Mooer</a>
+                                            <p>Pedals</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                       <div class="friend_dots">
+                                        <a href="#">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </a>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single_friend">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="profile_image">
+                                            <a href="#">
+                                                <img src="images/logo/xoticeffects.jpg" alt="Profile Picture">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="friend_name">
+                                            <a href="xotic_effects.html">Xotic Effects</a>
+                                            <p>Pedals</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                       <div class="friend_dots">
+                                        <a href="#">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </a>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single_friend">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="profile_image">
+                                            <a href="#">
+                                                <img src="images/logo/jhs.png" alt="Profile Picture">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="friend_name">
+                                            <a href="#">JHS</a>
+                                            <p>Pedals</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                       <div class="friend_dots">
+                                        <a href="#">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </a>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Main content section end -->
+         
+     
+
+    <!-- jQuery js -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom js -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile (Editable)</title>
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 (CSS) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- profile css -->
+    <link rel="stylesheet" href="css/profile_style.css">
+</head>
+<body>
+
+  <!-- Banner -->
+  <section class="profile-banner">
+    <div class="profile-banner__container"><br>
+      <div class="profile__cover">
+        <div class="photo">
+          <label for="profile">
+            <div class="profile_image">
+              <img id="avatarImg" src="images/my_profile.jpg" alt="Profile photo of Larme">
+            </div>
+            <input type="file" id="profile" aria-label="Upload profile photo" accept="image/*">
+            <i class="fas fa-camera" aria-hidden="true"></i>
+          </label>
+        </div>
+        <div class="cover_upload">
+          <input type="file" id="cover_photo" aria-label="Upload cover photo" accept="image/*">
+          <label for="cover_photo"><i class="fas fa-camera me-2"></i><span>Edit cover photo</span></label>
+        </div>
+      </div>
+
+      <div class="profile_text">
+        <h2 class="name" id="displayName">Larme</h2>
+
+        <!-- Bio viewer -->
+        <div id="bioView" class="d-flex align-items-center gap-2">
+          <p class="bio mb-0" id="bioText">I am Courtney Larmond</p>
+          <button class="btn btn-light btn-sm" data-edit="bio"><i class="fa-solid fa-pen me-1"></i>Edit</button>
+        </div>
+        <!-- Bio editor -->
+        <div id="bioEdit" class="d-none edit-card">
+          <div class="mb-2">
+            <label for="bioInput" class="form-label">Bio</label>
+            <textarea id="bioInput" class="form-control" rows="3" maxlength="160"></textarea>
+            <p class="small mt-1"><span id="bioLeft">160</span> characters remaining</p>
+          </div>
+          <div>
+            <button class="btn btn-secondary btn-sm me-2" data-cancel="bio">Cancel</button>
+            <button class="btn btn-primary btn-sm" data-save="bio">Save</button>
+          </div>
+        </div>
+
+        <hr class="border-white opacity-25">
+
+        <nav class="navbarMenu">
+          <ul class="custom_menu">
+            <li><a href="index.html" class="menu-item">Home</a></li>
+            <li><a href="profile.html" class="menu-item">Profile</a></li>
+            <li><a href="media_gallery.html" class="menu-item">Photos</a></li>
+            <li><a href="../index.html" class="menu-item">Manuals</a></li>
+          </ul>
+          <div class="menu_button">
+            <!-- a href="bookUpload.html" class="add_to_book"><i class="fas fa-plus-circle"></i><span class="ms-2">Add New Book</span></a>
+            <a href="edit_profile.html" class="edit_profile"><i class="fas fa-pen"></i><span class="ms-2">Edit Profile</span></a -->
+          </div>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <section class="main_content">
+    <div class="main_container">
+      <div class="row g-3">
+        <!-- Left: tabs -->
+        <div class="col-sm-4">
+          <h2 class="edit_details_title">About</h2>
+          <ul class="nav nav-pills flex-column" id="aboutTab" role="tablist" aria-orientation="vertical">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1" aria-selected="true">Overview</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="work-tab" data-bs-toggle="tab" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2" aria-selected="false">Work & Education</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="places-tab" data-bs-toggle="tab" data-bs-target="#tab-3" type="button" role="tab" aria-controls="tab-3" aria-selected="false">Places Lived</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#tab-4" type="button" role="tab" aria-controls="tab-4" aria-selected="false">Contact & Basic Info</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="cv-tab" data-bs-toggle="tab" data-bs-target="#tab-5" type="button" role="tab" aria-controls="tab-5" aria-selected="false">CV</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="sessions-tab" data-bs-toggle="tab" data-bs-target="#tab-6" type="button" role="tab" aria-controls="tab-6" aria-selected="false">Sessions</button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: content -->
+        <div class="col-sm-8">
+          <div class="tab_details tab-content" id="aboutTabContent">
+
+            <!-- Overview -->
+            <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="overview-tab" tabindex="0">
+              <div class="section-toolbar">
+                <button class="btn btn-outline-secondary btn-sm" data-edit="overview"><i class="fa-solid fa-pen me-1"></i>Edit</button>
+              </div>
+
+              <div id="overviewView">
+                <div class="overview">
+                  <div class="overview_details">
+                    <div class="overview_details_icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="overview_text"><p class="mb-0" id="ov_job">Works as Musician</p></div>
+                  </div>
+                </div>
+                <div class="overview">
+                  <div class="overview_details">
+                    <div class="overview_details_icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="overview_text"><p class="mb-0" id="ov_achivements">Had a good life using the talent and blessings God has instilled in me</p></div>
+                  </div>
+                </div>
+                <div class="overview">
+                  <div class="overview_details">
+                    <div class="overview_details_icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="overview_text"><p class="mb-0" id="ov_experience">Computer Science, University of Dhaka</p></div>
+                  </div>
+                </div>
+                <div class="overview">
+                  <div class="overview_details">
+                    <div class="overview_details_icon"><i class="fas fa-home"></i></div>
+                    <div class="overview_text"><p class="mb-0" id="ov_lives">Lives in Surrey</p></div>
+                  </div>
+                </div>
+                <div class="overview">
+                  <div class="overview_details">
+                    <div class="overview_details_icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="overview_text"><p class="mb-0" id="ov_from">From Dulwich, London</p></div>
+                  </div>
+                </div>
+                <div class="overview">
+                  <div class="overview_details">
+                    <div class="overview_details_icon"><i class="fas fa-heart"></i></div>
+                    <div class="overview_text"><p class="mb-0" id="ov_status">Married</p></div>
+                  </div>
+                </div>
+                <div class="overview">
+                  <div class="overview_details">
+                    <div class="overview_details_icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="overview_text"><p class="mb-0" id="ov_phone">01720 202020</p></div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="overviewEdit" class="d-none edit-card">
+                <div class="row g-2">
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="inp_job">Job</label>
+                    <input id="inp_job" class="form-control" type="text">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="inp_achivements">Achivements</label>
+                    <input id="inp_achivements" class="form-control" type="text">
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="inp_experience">Experience</label>
+                    <input id="inp_experience" class="form-control" type="text">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="inp_lives">Lives In</label>
+                    <input id="inp_lives" class="form-control" type="text">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="inp_from">Family Home</label>
+                    <input id="inp_from" class="form-control" type="text">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="inp_status">Status</label>
+                    <input id="inp_status" class="form-control" type="text">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="inp_phone">Phone</label>
+                    <input id="inp_phone" class="form-control" type="text">
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <button class="btn btn-secondary btn-sm me-2" data-cancel="overview">Cancel</button>
+                  <button class="btn btn-primary btn-sm" data-save="overview">Save</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Work & Education -->
+            <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="work-tab" tabindex="0">
+              <div class="section-toolbar">
+                <button class="btn btn-outline-secondary btn-sm" id="addWorkBtn"><i class="fa-solid fa-plus me-1"></i>Add</button>
+                <button class="btn btn-outline-danger btn-sm" id="clearWorkBtn"><i class="fa-regular fa-trash-can me-1"></i>Clear All</button>
+              </div>
+
+              <div id="workList" class="vstack gap-3">
+                <!-- cards render here -->
+              </div>
+            </div>
+
+            <!-- Places Lived -->
+            <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="places-tab" tabindex="0">
+              <div class="section-toolbar">
+                <button class="btn btn-outline-secondary btn-sm" data-edit="places"><i class="fa-solid fa-pen me-1"></i>Edit</button>
+              </div>
+              <div id="placesView"><p class="mb-0" id="placesText">London, Camberwell, Streatham, Thornton Heath, Shirley (Surrey)</p></div>
+              <div id="placesEdit" class="d-none edit-card">
+                <label class="form-label" for="placesInput">Places (comma separated)</label>
+                <textarea id="placesInput" class="form-control" rows="3"></textarea>
+                <div class="mt-2">
+                  <button class="btn btn-secondary btn-sm me-2" data-cancel="places">Cancel</button>
+                  <button class="btn btn-primary btn-sm" data-save="places">Save</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact & Basic Info -->
+            <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+              <div class="section-toolbar">
+                <button class="btn btn-outline-secondary btn-sm" data-edit="contact"><i class="fa-solid fa-pen me-1"></i>Edit</button>
+              </div>
+              <div id="contactView">
+                <p class="mb-2">Email: <a id="contactEmailLink" href="mailto:example@email.com">example@email.com</a></p>
+                <p class="mb-2">Phone: <span id="contactPhoneText">01720 202020</span></p>
+                <p class="mb-2">Birthday: <span id="contactBirthdayText">1 Jan</span></p>
+				<p class="mb-2">Kids: <span id="contactKidsText">Myles , Racheal</span></p>
+                <p class="mb-0">Other: <span id="contactOtherText">text</span></p>
+              </div>
+              <div id="contactEdit" class="d-none edit-card">
+                <div class="row g-2">
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="contactEmail">Email</label>
+                    <input id="contactEmail" type="email" class="form-control">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="contactPhone">Phone</label>
+                    <input id="contactPhone" type="text" class="form-control">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="contactBirthday">Birthday</label>
+                    <input id="contactBirthday" type="text" class="form-control" placeholder="e.g., 1 Jan">
+                  </div>                
+				<div class="col-12 col-md-6">
+                    <label class="form-label" for="contactKids">Kids</label>
+                    <input id="contactKids" type="text" class="form-control">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="contactOther">Other</label>
+                    <input id="contactOther" type="text" class="form-control" placeholder=":">
+                  </div>
+				</div>
+                <div class="mt-2">
+                  <button class="btn btn-secondary btn-sm me-2" data-cancel="contact">Cancel</button>
+                  <button class="btn btn-primary btn-sm" data-save="contact">Save</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- CV -->
+            <div class="tab-pane fade" id="tab-5" role="tabpanel" aria-labelledby="cv-tab" tabindex="0">
+              <div class="section-toolbar">
+                <button class="btn btn-outline-secondary btn-sm" data-edit="cv"><i class="fa-solid fa-pen me-1"></i>Edit</button>
+              </div>
+              <div id="cvView">
+                <h3 class="h6">Objective</h3>
+                <p id="cvObjective">Highly experienced and versatile musician with a passion for guitar...</p>
+                <h3 class="h6">Skills</h3>
+                <ul id="cvSkills"></ul>
+                <h3 class="h6">Experience</h3>
+                <ul id="cvExperience"></ul>
+                <h3 class="h6">References</h3>
+                <p id="cvReferences">Available upon request.</p>
+              </div>
+              <div id="cvEdit" class="d-none edit-card">
+                <div class="mb-2">
+                  <label class="form-label" for="cvObjectiveInput">Objective</label>
+                  <textarea id="cvObjectiveInput" class="form-control" rows="2"></textarea>
+                </div>
+                <div class="mb-2">
+                  <label class="form-label" for="cvSkillsInput">Skills (one per line)</label>
+                  <textarea id="cvSkillsInput" class="form-control" rows="4"></textarea>
+                </div>
+                <div class="mb-2">
+                  <label class="form-label" for="cvExperienceInput">Experience (one per line)</label>
+                  <textarea id="cvExperienceInput" class="form-control" rows="4"></textarea>
+                </div>
+                <div class="mb-2">
+                  <label class="form-label" for="cvReferencesInput">References</label>
+                  <input id="cvReferencesInput" class="form-control" type="text">
+                </div>
+                <div>
+                  <button class="btn btn-secondary btn-sm me-2" data-cancel="cv">Cancel</button>
+                  <button class="btn btn-primary btn-sm" data-save="cv">Save</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sessions -->
+            <div class="tab-pane fade" id="tab-6" role="tabpanel" aria-labelledby="sessions-tab" tabindex="0">
+              <div class="section-toolbar">
+                <button class="btn btn-outline-secondary btn-sm" data-edit="sessions"><i class="fa-solid fa-pen me-1"></i>Edit</button>
+              </div>
+              <div id="sessionsView">
+                <ul id="sessionsList" class="mb-0"></ul>
+              </div>
+              <div id="sessionsEdit" class="d-none edit-card">
+                <label class="form-label" for="sessionsInput">Performances (one per line)</label>
+                <textarea id="sessionsInput" class="form-control" rows="8"></textarea>
+                <div class="mt-2">
+                  <button class="btn btn-secondary btn-sm me-2" data-cancel="sessions">Cancel</button>
+                  <button class="btn btn-primary btn-sm" data-save="sessions">Save</button>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /tab_details -->
+        </div>
+      </div> <!-- /row -->
+    </div>
+  </section>
+
+  <!-- Bootstrap (JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // ------- persistence layer -------
+    const STORAGE_KEY = 'profileDataV1';
+
+    const defaultState = {
+      name: 'Larme',
+      bio: 'I am Courtney Larmond',
+      avatarDataUrl: '',         // optional base64
+      coverDataUrl: '',          // optional base64
+      overview: {
+        job: 'Works as Musician',
+        achivements: 'Had a good life using the talent and blessings God has instilled in me',
+        experience: 'Computer Science, University of Dhaka',
+        lives: 'Lives in Surrey',
+        from: 'From Dulwich, London',
+        status: 'Married',
+        phone: '01720 202020'
+      },
+      work: [
+        { 
+		company: 'Hard Rock Cafe', 
+		role: 'Resident Guitarist', 
+		desc: 'Weekly residency performing contemporary and classic sets.' }
+      ],
+      places: 'London, Camberwell, Streatham, Thornton Heath, Shirley (Surrey)',
+      contact: { 
+	  email: 'example@email.com', 
+	  phone: '01720 202020', 
+	  birthday: '1 Jan', 
+	  kids: 'myles rachael', 
+	  other:'text'},
+      cv: 
+	  {
+        objective: 'Highly experienced and versatile musician with a passion for guitar, seeking opportunities as a guitarist, writer, and producer.',
+        skills: [
+          'Guitar: 35+ years across gospel, rock, contemporary',
+          'Instruments: Bass, keyboards, drums',
+          'Writing & Production: songwriting, arranging, mentoring',
+          'Performance: live solo and ensemble',
+          'Studio: recording techniques and session work'
+        ],
+        experience: [
+          'Church Musician — Year–Present',
+          'Session Musician — Year–Present',
+          'Guitar Teacher — Year–Present',
+          'Music Producer — Year–Present'
+        ],
+        references: 'Available upon request.'
+      },
+      sessions: [
+        'London Community Gospel Choir',
+        'Noel Robinson',
+        'Visual Ministry Choir',
+        'Kingdom Choir',
+        'Marvin Sapp (USA)',
+        'Vicky Winans (USA)',
+        'Hard Rock Cafe (weekly residence)',
+        'Italy Gospel Music Festival',
+        '291 Club Hackney (Channel 4)',
+        'New Year\'s Eve Music Festival, Scotland'
+      ]
+    };
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return structuredClone(defaultState);
+        const parsed = JSON.parse(raw);
+        // merge with defaults to protect against older versions
+        return deepMerge(structuredClone(defaultState), parsed);
+      } catch (e) {
+        console.warn('Failed to load state, using defaults', e);
+        return structuredClone(defaultState);
+      }
+    }
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+    function deepMerge(base, override) {
+      for (const k in override) {
+        if (override[k] && typeof override[k] === 'object' && !Array.isArray(override[k])) {
+          base[k] = deepMerge(base[k] || {}, override[k]);
+        } else {
+          base[k] = override[k];
+        }
+      }
+      return base;
+    }
+
+    // --------- app state ---------
+    let state = loadState();
+
+    // --------- render helpers ---------
+    function qs(sel) { return document.querySelector(sel); }
+    function qsa(sel) { return Array.from(document.querySelectorAll(sel)); }
+
+    function renderHeader() {
+      qs('#displayName').textContent = state.name || '—';
+      qs('#bioText').textContent = state.bio || '—';
+      if (state.avatarDataUrl) qs('#avatarImg').src = state.avatarDataUrl;
+      if (state.coverDataUrl) {
+        document.querySelector('.profile__cover').style.backgroundImage = `url("${state.coverDataUrl}")`;
+      }
+    }
+
+    function renderOverview() {
+      qs('#ov_job').textContent = state.overview.job || '—';
+      qs('#ov_achivements').textContent = state.overview.achivements || '—';
+      qs('#ov_experience').textContent = state.overview.experience || '—';
+      qs('#ov_lives').textContent = state.overview.lives || '—';
+      qs('#ov_from').textContent = state.overview.from || '—';
+      qs('#ov_status').textContent = state.overview.status || '—';
+      qs('#ov_phone').textContent = state.overview.phone || '—';
+    }
+
+    function workCard(item, index) {
+      const id = `w_${index}`;
+      return `
+        <div class="border rounded p-3" data-index="${index}">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <div class="fw-semibold">${item.company || '—'}</div>
+              <div class="text-muted">${item.role || ''}</div>
+            </div>
+            <div class="btn-group btn-group-sm">
+              <button class="btn btn-outline-secondary" data-action="edit" aria-label="Edit work item ${index+1}"><i class="fa-solid fa-pen"></i></button>
+              <button class="btn btn-outline-danger" data-action="remove" aria-label="Remove work item ${index+1}"><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+          </div>
+          ${item._editing ? `
+            <div class="mt-3 edit-card">
+              <div class="row g-2">
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="${id}_company">Company</label>
+                  <input id="${id}_company" class="form-control" type="text" value="${escapeHtml(item.company || '')}">
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="${id}_role">Role</label>
+                  <input id="${id}_role" class="form-control" type="text" value="${escapeHtml(item.role || '')}">
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="${id}_desc">Description</label>
+                  <textarea id="${id}_desc" class="form-control" rows="2">${escapeHtml(item.desc || '')}</textarea>
+                </div>
+              </div>
+              <div class="mt-2">
+                <button class="btn btn-secondary btn-sm me-2" data-action="cancel">Cancel</button>
+                <button class="btn btn-primary btn-sm" data-action="save">Save</button>
+              </div>
+            </div>
+          ` : item.desc ? `<p class="mb-0 mt-2">${escapeHtml(item.desc)}</p>` : ''}
+        </div>
+      `;
+    }
+
+    function renderWork() {
+      const container = qs('#workList');
+      container.innerHTML = state.work.map(workCard).join('');
+    }
+
+    function renderPlaces() {
+      qs('#placesText').textContent = state.places || '—';
+    }
+
+    function renderContact() {
+      const { email, phone, birthday, kids, other } = state.contact;
+      const link = qs('#contactEmailLink');
+      link.textContent = email || '—';
+      link.href = email ? `mailto:${email}` : '#';
+      qs('#contactPhoneText').textContent = phone || '—';
+      qs('#contactBirthdayText').textContent = birthday || '—';
+	  qs('#contactKidsText').textContent = kids || '—';
+      qs('#contactOtherText').textContent = other || '—';
+    }
+
+    function renderCV() {
+      qs('#cvObjective').textContent = state.cv.objective || '—';
+      const skillsUl = qs('#cvSkills');
+      const expUl = qs('#cvExperience');
+      skillsUl.innerHTML = (state.cv.skills || []).map(s => `<li>${escapeHtml(s)}</li>`).join('');
+      expUl.innerHTML = (state.cv.experience || []).map(s => `<li>${escapeHtml(s)}</li>`).join('');
+      qs('#cvReferences').textContent = state.cv.references || '—';
+    }
+
+    function renderSessions() {
+      const ul = qs('#sessionsList');
+      ul.innerHTML = (state.sessions || []).map(s => `<li>${escapeHtml(s)}</li>`).join('');
+    }
+
+    function renderAll() {
+      renderHeader();
+      renderOverview();
+      renderWork();
+      renderPlaces();
+      renderContact();
+      renderCV();
+      renderSessions();
+    }
+
+    // ------- editors toggles -------
+    function toggleEditor(section, show) {
+      const viewEl = qs('#' + section + 'View');
+      const editEl = qs('#' + section + 'Edit');
+      if (!viewEl || !editEl) return;
+      if (show) {
+        viewEl.classList.add('d-none');
+        editEl.classList.remove('d-none');
+        // seed inputs
+        if (section === 'bio') {
+          const t = qs('#bioInput'); t.value = state.bio || ''; updateBioCount();
+        } else if (section === 'overview') {
+          qs('#inp_job').value = state.overview.job || '';
+          qs('#inp_achivements').value = state.overview.achivements || '';
+          qs('#inp_experience').value = state.overview.experience || '';
+          qs('#inp_lives').value = state.overview.lives || '';
+          qs('#inp_from').value = state.overview.from || '';
+          qs('#inp_status').value = state.overview.status || '';
+          qs('#inp_phone').value = state.overview.phone || '';
+        } else if (section === 'places') {
+          qs('#placesInput').value = state.places || '';
+        } else if (section === 'contact') {
+          qs('#contactEmail').value = state.contact.email || '';
+          qs('#contactPhone').value = state.contact.phone || '';
+          qs('#contactBirthday').value = state.contact.birthday || '';
+		  qs('#contactKids').value = state.contact.kids || '';
+          qs('#contactOther').value = state.contact.other || '';
+        } else if (section === 'cv') {
+          qs('#cvObjectiveInput').value = state.cv.objective || '';
+          qs('#cvSkillsInput').value = (state.cv.skills || []).join('\n');
+          qs('#cvExperienceInput').value = (state.cv.experience || []).join('\n');
+          qs('#cvReferencesInput').value = state.cv.references || '';
+        } else if (section === 'sessions') {
+          qs('#sessionsInput').value = (state.sessions || []).join('\n');
+        }
+      } else {
+        editEl.classList.add('d-none');
+        viewEl.classList.remove('d-none');
+      }
+    }
+
+    // ------- event wiring -------
+    function escapeHtml(s) {
+      return (s ?? '').toString().replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    }
+
+    function updateBioCount() {
+      const t = qs('#bioInput');
+      const left = (t.maxLength || 160) - t.value.length;
+      qs('#bioLeft').textContent = left;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderAll();
+
+      // Avatar upload -> data URL
+      qs('#profile').addEventListener('change', async (e) => {
+        const file = e.target.files?.[0]; if (!file) return;
+        const url = await toDataUrl(file);
+        state.avatarDataUrl = url;
+        saveState();
+        renderHeader();
+      });
+
+      // Cover upload -> data URL background
+      qs('#cover_photo').addEventListener('change', async (e) => {
+        const file = e.target.files?.[0]; if (!file) return;
+        const url = await toDataUrl(file);
+        state.coverDataUrl = url;
+        saveState();
+        renderHeader();
+      });
+
+      // Bio toggles
+      qs('[data-edit="bio"]').addEventListener('click', () => toggleEditor('bio', true));
+      qs('[data-cancel="bio"]').addEventListener('click', () => toggleEditor('bio', false));
+      qs('#bioInput').addEventListener('input', updateBioCount);
+      qs('[data-save="bio"]').addEventListener('click', () => {
+        state.bio = qs('#bioInput').value.trim();
+        saveState(); renderHeader(); toggleEditor('bio', false);
+      });
+
+      // Overview toggles
+      qs('[data-edit="overview"]').addEventListener('click', () => toggleEditor('overview', true));
+      qs('[data-cancel="overview"]').addEventListener('click', () => toggleEditor('overview', false));
+      qs('[data-save="overview"]').addEventListener('click', () => {
+        state.overview.job = qs('#inp_job').value.trim();
+        state.overview.achivements = qs('#inp_achivements').value.trim();
+        state.overview.degree = qs('#inp_degree').value.trim();
+        state.overview.lives = qs('#inp_lives').value.trim();
+        state.overview.from = qs('#inp_from').value.trim();
+        state.overview.status = qs('#inp_status').value.trim();
+        state.overview.phone = qs('#inp_phone').value.trim();
+        saveState(); renderOverview(); toggleEditor('overview', false);
+      });
+
+      // Places toggles
+      qs('[data-edit="places"]').addEventListener('click', () => toggleEditor('places', true));
+      qs('[data-cancel="places"]').addEventListener('click', () => toggleEditor('places', false));
+      qs('[data-save="places"]').addEventListener('click', () => {
+        state.places = qs('#placesInput').value.trim();
+        saveState(); renderPlaces(); toggleEditor('places', false);
+      });
+
+      // Contact toggles
+      qs('[data-edit="contact"]').addEventListener('click', () => toggleEditor('contact', true));
+      qs('[data-cancel="contact"]').addEventListener('click', () => toggleEditor('contact', false));
+      qs('[data-save="contact"]').addEventListener('click', () => {
+        state.contact.email = qs('#contactEmail').value.trim();
+        state.contact.phone = qs('#contactPhone').value.trim();
+        state.contact.birthday = qs('#contactBirthday').value.trim();
+		state.contact.kids = qs('#contactKids').value.trim();
+        state.contact.other = qs('#contactOther').value.trim();
+        saveState(); renderContact(); toggleEditor('contact', false);
+      });
+
+      // CV toggles
+      qs('[data-edit="cv"]').addEventListener('click', () => toggleEditor('cv', true));
+      qs('[data-cancel="cv"]').addEventListener('click', () => toggleEditor('cv', false));
+      qs('[data-save="cv"]').addEventListener('click', () => {
+        state.cv.objective = qs('#cvObjectiveInput').value.trim();
+        state.cv.skills = qs('#cvSkillsInput').value.split('\n').map(s => s.trim()).filter(Boolean);
+        state.cv.experience = qs('#cvExperienceInput').value.split('\n').map(s => s.trim()).filter(Boolean);
+        state.cv.references = qs('#cvReferencesInput').value.trim();
+        saveState(); renderCV(); toggleEditor('cv', false);
+      });
+
+      // Sessions toggles
+      qs('[data-edit="sessions"]').addEventListener('click', () => toggleEditor('sessions', true));
+      qs('[data-cancel="sessions"]').addEventListener('click', () => toggleEditor('sessions', false));
+      qs('[data-save="sessions"]').addEventListener('click', () => {
+        state.sessions = qs('#sessionsInput').value.split('\n').map(s => s.trim()).filter(Boolean);
+        saveState(); renderSessions(); toggleEditor('sessions', false);
+      });
+
+      // Work list actions
+      qs('#addWorkBtn').addEventListener('click', () => {
+        state.work.push({ company: '', role: '', desc: '', _editing: true });
+        saveState(); renderWork();
+      });
+      qs('#clearWorkBtn').addEventListener('click', () => {
+        if (confirm('Clear all work entries?')) {
+          state.work = [];
+          saveState(); renderWork();
+        }
+      });
+      qs('#workList').addEventListener('click', (e) => {
+        const btn = e.target.closest('button'); if (!btn) return;
+        const card = e.target.closest('[data-index]'); if (!card) return;
+        const idx = Number(card.getAttribute('data-index'));
+        const action = btn.getAttribute('data-action');
+
+        if (action === 'remove') {
+          if (confirm('Remove this entry?')) {
+            state.work.splice(idx, 1);
+            saveState(); renderWork();
+          }
+        } else if (action === 'edit') {
+          state.work[idx]._editing = true; saveState(); renderWork();
+        } else if (action === 'cancel') {
+          delete state.work[idx]._editing; saveState(); renderWork();
+        } else if (action === 'save') {
+          const company = card.querySelector('input[id*="_company"]').value.trim();
+          const role = card.querySelector('input[id*="_role"]').value.trim();
+          const desc = card.querySelector('textarea[id*="_desc"]').value.trim();
+          state.work[idx] = { company, role, desc };
+          saveState(); renderWork();
+        }
+      });
+    });
+
+    async function toDataUrl(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+  </script>
+</body>
+</html>

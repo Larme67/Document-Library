@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management System</title>
+
+    <!-- bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome/css/bootstrap/dist/css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="font/fontawesome/css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"> 
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+    <!-- banner part start -->
+    <section class="profile-banner">
+        <div class="profile-banner__container">
+            <br><div class="profile__cover"> 
+                <div class="photo">
+                    <label for="profile">
+                        <div class="profile_image">
+                            <img src="images/my_profile.jpg" alt="">  
+                        </div> 
+                        <input type="file" id="profile"><i class="fas fa-camera"></i>
+                    </label>
+                </div>
+				<br>
+				<br>
+                <div class="cover_upload">
+                    <input type="file" id="cover_phpto">
+                    <label for="cover_phpto">
+                         <i class="fas fa-camera me-sm-2 mx-auto"></i> 
+                         <span class="d-sm-inline d-none">Edit cover Photo</span> 
+                    </label>
+                </div>
+            </div>
+            <div class="profile_text">
+                <h2 class="name">Larme</h2>
+                <div class="profile_text_edit-still" id="profile_edit_button">
+                    <p class="bio">My Management System</p>
+                    <button class="edit_button btn btn-primary" onclick="show_edit_form()">Edit</button>
+                </div>
+                <div class="profile_text_edit-form d-none" id="profile_edit_form">
+                    <textarea name="" id="" class="form-control">Personal Music instruments and studio equipment.</textarea>
+                    <p>22 characters remaining</p>
+                    <div class="profile_text_edit-form_button">
+                        <button class="cancel_button btn btn-primary" onclick="show_edit_button_container()">Cancel</button>
+                        <button class="save_button btn btn-primary" onclick="show_edit_button_container()">Save</button>
+                    </div>
+                </div>  
+            </div>
+            <hr>
+            <!-- menu start-->
+            
+            <nav class="navbarMenu"> 
+                  <div class="navContainer" id="">
+                      <ul class="custom_menu">
+                          <li><a href="index.html" class="menu-item">Home</a></li>
+                          <li><a href="profile.html" class="menu-item">profile</a></li>
+                          <li><a href="media_gallery.html" class="menu-item">Guitar Builds</a></li>
+                          <li><a href="video/videoindex.html" class="menu-item">Performance Video's</a></li>
+                          <!--li><a href="production/production.html" class="menu-item">Studio</a></li-->
+                          <li><a href="production/production.html" class="menu-item">My Productions</a></li>
+                          <li><a href="../index.html" class="menu-item">Manuals</a></li>
+                      </ul>
+                     <!--div class="menu_button">
+                         <a href="bookUpload.html" class="add_to_book"><i class="fas fa-plus-circle"></i>Add New Instrument</a>
+                         <a href="edit_profile.html" class="edit_profile"><i class="fas fa-pen"></i>Edit Profile</a> 
+                     </div-->
+                  </div> 
+              </nav>
+           
+            <!-- menu end-->
+
+        </div>
+    </section>
+    <!-- banner part end -->
+
+
+    <!-- Main content section start -->
+    <section class="main_content">
+        <div class="main_container">
+            <div class="library_part">
+                <div class="library_header">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h2>Calmsoundz</h2>
+                        </div>
+                        <!--div class="col-md-6">
+                            <div class="input-group w-75 mx-auto">
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+                        </div-->
+                    </div>
+                </div>
+                <div class="all_books">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-6">
+                            <div class="single_book">
+                                <div class="book">
+                                    <img src="images/guitar_family.jpeg" alt="Guitar Image">
+                                </div>
+                                <div class="book_name">
+                                    <h1>Electric</h1>
+                                    <h2>Guitars</h2>
+                                </div>
+                                <div class="expand_book">
+                                    <a href="guitars.html">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <!--a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <i class="fas fa-hand-holding-medical"></i>
+                                    </a-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-6">
+                            <div class="single_book">
+                                <div class="book">
+                                    <img src="images/acoustic_family.jpeg" alt="Book Image">
+                                </div>
+                                <div class="book_name">
+                                    <h1>Acoustic</h1>
+                                    <h2>Guitars</h2>
+                                </div>
+                                <div class="expand_book">
+                                    <a href="acoustic.html">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <!--a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <i class="fas fa-hand-holding-medical"></i>
+                                    </a-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-6">
+                            <div class="single_book">
+                                <div class="book">
+                                    <img src="images/bass/bass_family.jpeg" alt="Book Image">
+                                </div>
+                                <div class="book_name">
+                                    <h1>Bass</h1>
+                                    <h2>Guitars</h2>
+                                </div>
+                                <div class="expand_book">
+                                    <a href="bass.html">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <!--a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <i class="fas fa-hand-holding-medical"></i>
+                                    </a-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-6">
+                            <div class="single_book">
+                                <div class="book">
+                                    <img src="images/amps/amps.jpg" alt="Book Image">
+                                </div>
+                                <div class="book_name">
+                                    <h1>Amps</h1>
+                                    <h2>:</h2>
+                                </div>
+                                <div class="expand_book">
+                                    <a href="amps.html">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <!--a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <i class="fas fa-hand-holding-medical"></i>
+                                    </a-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-6">
+                            <div class="single_book">
+                                <div class="book">
+                                    <img src="images/pedals/pedals.jpg" alt="Book Image">
+                                </div>
+                                <div class="book_name">
+                                    <h1>Pedals</h1>
+                                    <h2>multi-effects and stomp boxes</h2>
+                                </div>
+                                <div class="expand_book">
+                                    <a href="pedals.html">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <!--a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <i class="fas fa-hand-holding-medical"></i>
+                                    </a-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-6">
+                            <div class="single_book">
+                                <div class="book">
+                                    <img src="images/instruments/instruments.jpg" alt="Book Image">
+                                </div>
+                                <div class="book_name">
+                                    <h1>Instruments</h1>
+                                    <h2>Instruments of Culture</h2>
+                                </div>
+                                <div class="expand_book">
+                                    <a href="instruments.html">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <!--a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <i class="fas fa-hand-holding-medical"></i>
+                                    </a-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--div class="col-md-3 col-sm-4 col-6">
+                            <div class="single_book">
+                                <div class="book">
+                                    <img src="images/book-3.jpeg" alt="Book Image">
+                                </div>
+                                <div class="book_name">
+                                    <h1>Spare</h1>
+                                    <h2>add new here</h2>
+                                </div>
+                                <div class="expand_book">
+                                    <a href="book_details.html">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <i class="fas fa-hand-holding-medical"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Modal -->
+  <!--div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title ms-auto" id="exampleModalLabel">New items </h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="lending_info">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="lending_user_info">
+                            <div class="user_form">
+                                <form action="">
+                                    <div class="personal_info">
+                                        <input class="form-control" type="text" placeholder="Your name">
+                                        <input class="form-control" type="text" placeholder="Your phone">
+                                        <input class="form-control" type="email" placeholder="Your email">
+                                        <input class="form-control" type="text" placeholder="Your address">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon3">Receiving date</span>
+                                            <input type="date" class="form-control mb-0" id="basic-url" aria-describedby="basic-addon3">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon3">Returning date</span>
+                                            <input type="date" class="form-control mb-0" id="basic-url" aria-describedby="basic-addon3">
+                                        </div>
+                                        <input class="btn btn-primary w-100" type="submit" value="submit">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div-->
+  
+    <!-- Main content section end -->
+            
+
+    <!-- jQuery js -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom js -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
