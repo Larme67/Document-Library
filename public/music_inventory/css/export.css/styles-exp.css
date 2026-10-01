@@ -1,0 +1,86 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #8282bb;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .profile-section {
+            margin-bottom: 20px;
+        }
+        .profile-section label {
+            font-weight: bold;
+            color: #555;
+        }
+        .input-field, .notes {
+            width: 70%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            margin-top: 5px;
+        }
+        .input-field-half {
+            width: 48%;
+            margin-right: 4%;
+        }
+        .input-field-half:last-child {
+            margin-right: 0;
+        }
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .submit-btn {
+            display: block;
+            width: 60%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+			border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .export-btn {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .export-btn:hover {
+            background-color: #0056b3;
+        }
