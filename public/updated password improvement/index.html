@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="images/favicon2.ico">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Password Manager</title>
+</head>
+<body>
+    <h1 id="title">Password Manager</h1>
+	<!-- div >
+    <img src= "images/Merton-Logo.png" alt=logo width="210" height="45" class="imgcenter">
+   </div --><br>
+    
+   <!--page content-->
+<fieldset>
+ <table>	
+    <form id="passwordForm">
+        <!--<label for="system">System:</label>
+        <input type="text" id="system" name="system" required><br><br>-->
+        
+		<br><br>
+	<div class="container">	
+	    <div><label for="system"><b>System:</b>
+          <select id="system" name="system" required>
+            <option value="">(select one)</option>
+            <option value="Admin">Admin</option>
+            <option value="Libraries">Libraries</option>
+			<option value="Princh">Princh</option>
+			<option value="Synergy">Synergy</option>
+            <option value="App Manager">App Manager</option>
+            <option value="Mosaic">Mosaic</option>
+            <option value="Housing">Housing</option>
+            <option value="Core +">Core +</option>
+            <option value="SFTP">SFTP sites</option>
+			<option value="LGFL">LGFL</option>
+            <option value="notsure">Not sure</option>
+          </select>
+		<br><br>
+		  <label for="module"><b>Module:</b>
+		  <select id="module" name="module" required>
+            <option value="">(select one)</option>
+			<option value="Merton">Merton</option>
+            <option value="Admin">Netloan</option>
+            <option value="SirsiDynix">SirsiDynix </option>
+			<option value="LGFL">LGFL</option>
+            <option value="Sophos">Sophos</option>
+			<option value="BCA">BCA</option>
+			<option value="Lyngsoe">Lyngsoe</option>
+			<option value="Princh">Princh </option>
+            <option value="library Card">library Card</option>
+			<option value="Basecamp">Basecamp</option>
+			<option value="Enterprise catalog web admin">Enterprise catalog web admin</option>
+			<option value="Hublet Admin">Hublet Admin</option>
+			<option value="library Card">library Card</option>
+			<option value="Lorensberg">Lorensberg </option>
+			<option value="Bibliotheca">Bibliotheca </option>
+			<option value="VMWare">VMWare</option>
+			<option value="Nof account">Nof account </option>
+			<option value="Servelec">Servelec </option>
+			<option value="Access portal">Access portal</option>
+			<option value="Synergy Reporting site">Synergy Reporting site </option>
+			<option value="New dedicated server">New dedicated server</option>
+			<option value="App manager Live">App manager Live</option>
+			<option value="Mosaic">Mosaic</option>
+            <option value="Jira.servelec portal">Jira.servelec portal</option>
+            <option value="Capita Housing">Capita Housing</option>
+            <option value="Core +">Core +</option>
+            <option value="SFTP sites">SFTP sites</option>
+			<option value="SFTP sites">LGFL</option>
+            <option value="notsure">Not sure</option>
+          </select>
+		  <br><br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <label for="url">URL:</label>
+        <input type="url" id="url" name="url" required><br><br>	
+	  </div>
+	  <div>	
+		
+		<label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone"><br><br>
+	
+		<label for="accountman">Account Manager:</label>
+        <input type="text" id="accountman" name="accountman"><br><br>
+		
+		<label for="accountmanemail">Email:</label>
+        <input type="text" id="accountmanemail" name="accountmanemail"><br><br>
+		
+		<label for="otherphone">Other Numbers:</label>
+        <input type="text" id="otherphone" name="otherphone"><br><br>
+	  </div>	
+     </div><br><br>   
+        <label for="notes">Notes:</label><br>
+        <textarea id="notes" name="notes" rows="7" cols="70" placeholder="Info..."></textarea><br><br>
+        
+        
+        
+        <button type="button" onclick="addRow()">Submit</button>
+    </form>
+ </table>
+</fieldset>    
+    
+    <button type="button" onclick="downloadXML()">Download XML</button>
+	 <button onclick="window.location.href='table.html'">Table</button>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>

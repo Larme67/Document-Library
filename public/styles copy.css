@@ -1,0 +1,221 @@
+/* Body & Background */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("wallpaper.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 24px;
+    color: #111;
+}
+
+/* Container with semi-transparent background */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centers the text */
+    position: relative;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8); /* light background */
+    border-bottom: 2px solid #ccc;
+    gap: 14px;
+    margin-bottom: 18px;
+    ext-align: center;*/ /* align logo to the left */
+}
+ 
+/* Logo styling */
+.logo {
+    position: absolute;
+    left: 135px; /* keep logo stuck to the left */
+    width: 100px; /* shrink the logo */
+    height: auto; /* keep proportions */
+    display: block; /* treat it as a block element */
+    margin: 10px auto; /* center it horizontally, with space around */
+}
+
+/* If you want it top-left instead of centered */
+header { 
+    text-align: center;/* align logo to the left */
+   padding: 10px;
+}
+
+/* Upload Section */
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.drop-zone {
+    border: 2px dashed #2563eb;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background: #f0f4ff;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
+    font-weight: 600;
+    color: #1e40af;
+}
+
+    .drop-zone.hover {
+        background: #dbeafe;
+        border-color: #1d4ed8;
+    }
+
+#uploadBtn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    width: max-content;
+}
+
+    #uploadBtn:hover {
+        filter: brightness(1.05);
+    }
+
+.instructions {
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+/* Search Box */
+#search {
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+/* Document List */
+.doc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 14px;
+}
+
+.doc-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.meta {
+    display: grid;
+    gap: 6px;
+}
+
+.doc-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 700;
+    word-break: break-all;
+}
+
+    .doc-link:hover {
+        text-decoration: underline;
+    }
+
+.details {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.muted {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.sep {
+    opacity: .6;
+}
+
+.badge.ext {
+    display: inline-block;
+    font-size: 0.8rem;
+    background: #eef2ff;
+    color: #3730a3;
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid #c7d2fe;
+}
+
+/* Actions: Open & Delete */
+.actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+    .actions .open {
+        background: #111827;
+        color: #fff;
+        text-decoration: none;
+        padding: 6px 10px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+
+        .actions .open:hover {
+            filter: brightness(1.1);
+        }
+
+    .actions .delete {
+        background: #dc2626;
+        color: #fff;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+        .actions .delete:hover {
+            filter: brightness(1.1);
+        }
+
+/* Empty state */
+.empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #6b7280;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 900px) {
+    .doc-list {
+        grid-template-columns: 1fr;
+    }
+
+    .upload-section {
+        flex-direction: column;
+    }
+}
