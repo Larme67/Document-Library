@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="font/fontawesome/css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <!-- Smart tab CSS -->
+    <link rel="stylesheet" href="css/smart_tab_all.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- banner part start -->
+    <section class="profile-banner">
+        <div class="profile-banner__container">
+            <br><div class="profile__cover">
+                <div class="photo">
+                    <label for="profile">
+                        <div class="profile_image">
+                            <img src="images/my_profile.jpg" alt="">
+                        </div>
+                        <input type="file" id="profile"><i class="fas fa-camera"></i>
+                    </label>
+                </div>
+                <div class="cover_upload">
+                    <input type="file" id="cover_phpto">
+                    <label for="cover_phpto">
+                        <i class="fas fa-camera me-sm-2 mx-auto"></i>
+                        <span class="d-sm-inline d-none">Edit cover Photo</span>
+                    </label>
+                </div>
+            </div>
+            <div class="profile_text">
+                <h2 class="name">Larme</h2>
+                <div>
+                    <p id="bio_text">I am Courtney Larmond</p>
+                    <textarea id="bio_input" class="form-control d-none">I am Courtney Larmond</textarea>
+                    <button id="bio_edit_btn" class="btn btn-sm btn-primary" onclick="enableEdit('bio')">Edit</button>
+                    <button id="bio_save_btn" class="btn btn-sm btn-success d-none" onclick="saveEdit('bio')">Save</button>
+                </div>
+            </div>
+            <hr>
+            <!-- menu start-->
+            <nav class="navbarMenu">
+                <div class="navContainer" id="">
+                    <ul class="custom_menu">
+                        <li><a href="index.html" class="menu-item">Home</a></li>
+                        <li><a href="profile.html" class="menu-item">profile</a></li>
+                        <li><a href="media_gallery.html" class="menu-item">photos</a></li>
+                        <li><a href="manuals.html" class="menu-item">Manuals</a></li>
+                    </ul>
+                    <!-- div class="menu_button">
+                        <a href="bookUpload.html" class="add_to_book"><i class="fas fa-plus-circle"></i>Add New Book</a>
+                        <a href="edit_profile.html" class="edit_profile"><i class="fas fa-pen"></i>Edit Profile</a>
+                    </div -->
+                </div>
+            </nav>
+            <!-- menu end-->
+        </div>
+    </section>
+    <!-- banner part end -->
+    <!-- Main content section start -->
+    <section class="main_content">
+        <div class="main_container">
+            <div class="edit_details">
+                <div class="edit_info">
+                    <div id="smarttab" class="row">
+
+                        <!-- Left Sidebar Tabs -->
+                        <div class="col-sm-4">
+                            <ul class="nav">
+                                <li><h2 class="edit_details_title">About</h2></li>
+                                <li><a class="nav-link active" href="#tab-1">Overview</a></li>
+                                <li><a class="nav-link" href="#tab-2">Work and Education</a></li>
+                                <li><a class="nav-link" href="#tab-3">Places Lived</a></li>
+                                <li><a class="nav-link" href="#tab-4">Contact and Basic Info</a></li>
+                                <li><a class="nav-link" href="#tab-5">CV</a></li>
+                                <li><a class="nav-link" href="#tab-6">Sessions</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Right Tab Content -->
+                        <div class="col-sm-8 tab_details">
+                            <div class="tab-content">
+
+                                <!-- Tab 1: Overview -->
+                                <div id="tab-1" class="tab-pane" role="tabpanel">
+                                    <p id="overview_text">Works at Musician</p>
+                                    <textarea id="overview_input" class="form-control d-none">Works at Musician</textarea>
+                                    <button id="overview_edit_btn" class="btn btn-sm btn-primary" onclick="enableEdit('overview')">Edit</button>
+                                    <button id="overview_save_btn" class="btn btn-sm btn-success d-none" onclick="saveEdit('overview')">Save</button>
+                                </div>
+
+                                <!-- Tab 2: Work -->
+                                <div id="tab-2" class="tab-pane" role="tabpanel">
+                                    <h4>Work and Education</h4>
+                                    <div id="work_list"></div>
+                                    <div id="work_form">
+                                        <div id="work-main-container">
+                                            <a id="work-add-more" class="btn btn-primary add_button" href="javascript:;">
+                                                <i class="fas fa-plus"></i> Add Work / Education
+                                            </a>
+                                            <div class="work-container-item mt-2">
+                                                <input type="text" class="form-control mb-2 work-input" placeholder="Job / School">
+                                                <textarea class="form-control mb-2 work-input" placeholder="Description"></textarea>
+                                                <a href="javascript:void(0)" class="remove-item btn btn-warning bottom_btn">Remove</a>
+                                                <a href="javascript:void(0)" class="save-item btn btn-success bottom_btn">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tab 3: Places -->
+                                <div id="tab-3" class="tab-pane" role="tabpanel">
+                                    <p id="places_text">London, Camberwell, Streatham, Thornton Heath, Surrey Shirley</p>
+                                    <textarea id="places_input" class="form-control d-none">London, Camberwell, Streatham, Thornton Heath, Surrey Shirley</textarea>
+                                    <button id="places_edit_btn" class="btn btn-sm btn-primary" onclick="enableEdit('places')">Edit</button>
+                                    <button id="places_save_btn" class="btn btn-sm btn-success d-none" onclick="saveEdit('places')">Save</button>
+                                </div>
+
+                                <!-- Tab 4: Contact -->
+                                <div id="tab-4" class="tab-pane" role="tabpanel">
+                                    <p id="contact_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <textarea id="contact_input" class="form-control d-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</textarea>
+                                    <button id="contact_edit_btn" class="btn btn-sm btn-primary" onclick="enableEdit('contact')">Edit</button>
+                                    <button id="contact_save_btn" class="btn btn-sm btn-success d-none" onclick="saveEdit('contact')">Save</button>
+                                </div>
+
+                                <!-- Tab 5: CV -->
+                                <div id="tab-5" class="tab-pane" role="tabpanel">
+                                    <h4>Curriculum Vitae</h4>
+                                    <div id="cv_list"></div>
+                                    <div id="cv_form">
+                                        <div id="cv-main-container">
+                                            <a id="cv-add-more" class="btn btn-primary add_button" href="javascript:;">
+                                                <i class="fas fa-plus"></i> Add CV Section
+                                            </a>
+                                            <div class="cv-container-item mt-2">
+                                                <input type="text" class="form-control mb-2 cv-input" placeholder="Title (e.g. Skills, Experience)">
+                                                <textarea class="form-control mb-2 cv-input" placeholder="Details"></textarea>
+                                                <a href="javascript:void(0)" class="remove-item btn btn-warning bottom_btn">Remove</a>
+                                                <a href="javascript:void(0)" class="save-item btn btn-success bottom_btn">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tab 6: Sessions -->
+                                <div id="tab-6" class="tab-pane" role="tabpanel">
+                                    <p id="sessions_text">London Community Gospel Choir, Noel Robinson, Marvin Sapp, Hard Rock Cafe, Italy Gospel Festival...</p>
+                                    <textarea id="sessions_input" class="form-control d-none">London Community Gospel Choir, Noel Robinson, Marvin Sapp, Hard Rock Cafe, Italy Gospel Festival...</textarea>
+                                    <button id="sessions_edit_btn" class="btn btn-sm btn-primary" onclick="enableEdit('sessions')">Edit</button>
+                                    <button id="sessions_save_btn" class="btn btn-sm btn-success d-none" onclick="saveEdit('sessions')">Save</button>
+                                </div>
+
+                            </div> <!-- /.tab-content -->
+                        </div> <!-- /.col-sm-8 -->
+
+                    </div> <!-- /.row -->
+                </div> <!-- /.edit_info -->
+            </div> <!-- /.edit_details -->
+        </div> <!-- /.main_container -->
+    </section>
+    <!-- Main content section end -->
+    <!-- jQuery js -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Smart tabs JS -->
+    <script src="js/jquery.smartTab.min.js"></script>
+    <!-- cloneData js -->
+    <script src="js/cloneData.js"></script>
+    <!-- Edit details logic -->
+    <script src="js/edit_details.js"></script>
+    <!-- Custom js -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
