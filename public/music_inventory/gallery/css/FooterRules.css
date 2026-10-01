@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap'); /*Brings in the font*/
+footer { /*Properties of the entire footer*/
+    align-content: center;
+    padding: 0px 20px 20px 20px;
+}
+#hrFooterMargin { /*Formatting for the footer line, making it central*/
+    opacity: 0; /*To allow the fade-in animation, the initial opacity must be 0*/
+    padding:0 16% 0 16%;
+    animation: fadeInAnimation ease-in 0.4s; /*triggers the fade-in animation; Slow start, takes # seconds to complete*/
+    animation-delay: 0.4s; 
+    animation-fill-mode: forwards; /*Permanently sets the values of the last keyframe*/
+}
+footer hr { /*Formatting for the footer line*/
+    height: 1px;
+    border: 0;
+    border-bottom: 1px solid rgb(54, 54, 54);
+    margin: 1.2em 0; /* First value sets the top and bottom, second the left and right*/
+}
+.fa-facebook, .fa-instagram, .fa-youtube, .fa-soundcloud, .fa-tumblr { /*Changes the Socials*/
+    opacity: 0; /*To allow the fade-in animation, the initial opacity must be 0*/
+    padding: 18px; /*Makes the buttons bigger, but keeps their shape*/
+    width: 16px; /*Keeps them round at 16px*/
+    text-decoration: none; /*Gets rid of underlines for hyperlinks*/
+    text-align: center;
+    border: 2px solid white;
+    margin: 5px 20px; /*First value, distance from line, second value, how separated each button is*/
+    border-radius: 100%; /*Makes it round*/
+    background: black;
+    color: white;
+    box-shadow: 0px 0px 10px #9E9E9E; /*Sets the initial glow level*/
+    transition: box-shadow 0.3s ease-in-out; /*Sets the glow change for when it's hovered over*/
+    animation: fadeInAnimation ease-in 1s; /*Communal animation factors for socials*/
+    animation-fill-mode: forwards;
+    animation-play-state: paused; /*This is changed by the JS "ScrolledToBottom" file, updated to "running" when scrolled to the bottom*/
+}
+.fa-facebook:hover, .fa-facebook:active, .fa-instagram:hover, .fa-instagram:active, .fa-youtube:hover, .fa-youtube:active,
+.fa-soundcloud:hover, .fa-soundcloud:active, .fa-tumblr:hover, .fa-tumblr:active {box-shadow: 0px 0px 20px #9E9E9E;} /*Sets glow level when socials are hovered over*/
+
+.fa-facebook:hover, .fa-facebook:active {background: #3B5998;} /*Sets background colour for hover*/
+.fa-instagram:hover, .fa-instagram:active {background: #8a3ab9;}
+.fa-youtube:hover, .fa-youtube:active {background: #bb0000;}
+.fa-soundcloud:hover, .fa-soundcloud:active {background: #ff5500;}
+.fa-tumblr:hover, .fa-tumblr:active {background: #a8996e;}
+
+#socialDistancer{ /*This makes the socials split into 3 and 2 under a certain window width*/
+    display: none;
+}
+@media only screen and (max-width: 850px) { 
+    #socialDistancer {display: block;} /*Under 850px, makes the "socialDistancer" div appear, splitting the socials*/
+    .fa-facebook {animation-delay: 0.8s} /*delays the socials animations in a centre to outside way when split*/
+    .fa-soundcloud {animation-delay: 0.5s}
+    .fa-instagram {animation-delay: 0.2s}
+    .fa-tumblr {animation-delay: 0.5s}
+    .fa-youtube {animation-delay: 0.8s}
+}
+@media only screen and (min-width: 851px) {
+    #socialDistancer {display: none;} /*Over 851px, makes the "socialDistancer" div disappear, realigning the socials*/
+    .fa-facebook {animation-delay: 0.8s;} /*delays the socials animations in a centre to outside way*/
+    .fa-instagram {animation-delay: 0.5s;}
+    .fa-youtube {animation-delay: 0.2s;}
+    .fa-soundcloud {animation-delay: 0.5s;}
+    .fa-tumblr {animation-delay: 0.8s;}        
+}
+
+footer p { /*Properties of the contact info*/
+    opacity: 0; /*To allow the fade-in animation, the initial opacity must be 0*/
+    color:#9E9E9E;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 4px;
+    word-spacing: 8em; /*Sets distance between "E" and "M"*/
+    line-height: 2em;
+    transform: scaleY(1.01); /*Slightly stretches the text vertically*/
+    text-align: center;
+    text-shadow: 0px 0px 10px white;
+    animation: fadeInAnimation ease-in 2s; /*triggers the fade-in animation; Slow start, takes # seconds to complete*/
+    animation-delay: 1s;
+    animation-fill-mode: forwards; /*Permanently sets the values of the last keyframe*/
+    animation-play-state: paused; /*This is changed by the JS "ScrolledToBottom" file, updated to "running" when scrolled to the bottom*/ 
+}
+footer p em { /*Properties of the contact info*/
+    font-style: normal; /*Reverts the default italics to normal text*/
+    word-spacing: normal; /*Allows grouping of the "E" and "M" sections*/
+}
+#footerSpacer {height: 24px;} /*Sets the gap between the socials and the contact info*/
+
+#footerMargin { /*Makes the formatting central and sorts spacing*/
+    padding: 30px 18% 30px 18%; /* Top, right, bottom, left*/
+    text-align:center;
+}

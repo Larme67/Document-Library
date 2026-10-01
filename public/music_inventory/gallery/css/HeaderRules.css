@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap'); /*Brings in the font*/
+body { /*General formatting for body on every page*/
+    background-color: black;
+    min-width: 580px;
+    max-width: 1920px;
+}
+header { /*Properties of the entire header*/
+    align-content: center;
+    padding: 0px 20px 20px 20px;
+    z-index:1;
+    overflow: hidden;
+  }
+.mainTitlePosition { /*Positions the main title and sub-title*/
+    padding: 00px 0px 110px 0px;
+    transform: translateY(-61px);
+}
+
+header h1, header h2 { /*Properties of both the main tite and sub-title*/
+    opacity: 0; /*To allow the fade-in animation, the initial opacity must be 0*/
+    font-family: 'Cantata One', serif;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0px 0px 16px #9E9E9E;
+    animation: fadeInAnimationTitle ease-in-out 0.7s; /*triggers the fade-in animation; Slow start, takes # seconds to complete*/
+    animation-delay: 1s;
+    animation-fill-mode: forwards; /*Permanently sets the values of the last keyframe*/
+}
+header h1 { /*Properties of the main title*/
+    color: white;
+    font-size: 73px;
+    letter-spacing: 1px;
+    transform: scaleY(1.1); /*Slightly stretches the text vertically*/
+    top: 26px;
+}
+header h2 { /*Properties for the sub-title*/
+    color: #9E9E9E;
+    font-size: 23px;
+    letter-spacing: 4px;
+    top: -26px;
+}
+.leftLink, .links, .fa-bars, #burgerMenu { /*Properties for all the links in the header*/
+    color: white;
+    font-family: 'Cantata One', serif;
+    text-transform: uppercase;
+    text-align: right;
+    position: relative;
+}
+header a, header a em{ /*Properties for all links in the header*/
+    transition: color 0.3s;
+    text-shadow: 0px 0px 8px white;
+    animation: fadeInAnimation ease-in-out 0.5s;
+    animation-delay: 0.6s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+.leftLink { /*Properties for the left-hand link*/
+    float: left;
+    word-spacing: normal;
+    font-size: 24px;
+    letter-spacing: 3px;
+    top: 12px;
+    z-index: 2;
+    transition: color 1s, text-shadow 1s;
+}
+.links { /*Properties for the right-hand links and button link*/
+    word-spacing: 2em;
+    font-size: 13px;
+    letter-spacing: 2px;
+    top: 10px;
+    z-index: 0;
+}
+.links em { /*Properties for the emphasis in the links class (used to fix the button link formatting)*/
+    word-spacing: normal;
+    font-style: normal;
+}
+.fa-bars { /*Properties of the hamburger button*/
+    float: right;
+    font-size: 13px;
+    letter-spacing: 2px;
+    word-spacing: 2em;
+    top: 10px;
+    opacity: 0;
+    background-color: rgba(184, 0, 0, 1);
+    box-shadow: 2px 2px 2px rgba(150, 0, 0, 1);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: opacity 0.3s, transform 1s, background-color 0.3s ease-in-out;
+    animation: fadeInAnimation ease-in-out 0.5s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+    z-index: 2;
+    cursor: pointer;
+}
+#hamburgerButtonSpacer { /*Properties for the hamburger spacer*/
+    padding-top: 33px;
+    display: block;
+}
+.burgerMenu { /*Properties for the menu*/
+    transition: color 0.3s;
+    transform: translateX(1100px);
+    text-align: right;
+    position: relative;
+    float: right;
+    top: 10px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    word-spacing: 0px;
+    line-height: 2em;
+    opacity: 0;
+    background-color: rgba(184, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px rgba(150, 0, 0, 0.4);
+    color: white;
+    padding: 5px 20px 0px 20px ;
+    text-decoration: none;
+    transition: opacity 0.3s, transform 1s ease-in-out;
+    animation: fadeInAnimation ease-in-out 0.5s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+    z-index: 3;
+    display: block;
+}
+#burgerLayer2 { /*Properties for the "booking enquiries" in the menu*/
+    transition: all 1s;
+    text-shadow: 0px 0px 8px black;
+}
+#burgerX em { /*Properties for the menu minimiser*/
+    transition: color 0.3s;
+    font-style: normal;
+    text-shadow: 0px 0px 8px white;
+    font-size: 16px;
+    cursor: pointer;
+}
+#burgerX b { /*Properties for the menu minimiser spacing*/
+    word-spacing: 110px;
+    cursor: default;
+}
+#burgerMenuReplacementSpacer { /*Properties for the burger menu replacement spacer*/
+    padding-top: 152px;
+    display: block;
+}
+#onNow { /*Properties for whichever link is currently active*/
+    opacity: 0;
+    color:#9E9E9E;
+    text-decoration: none;
+} 
+#standardLink:link, #standardLink:visited, #leftLink:link, #leftLink:visited, #buttonLink:link, #buttonLink:visited,
+#burgerLayer:link, #burgerLayer:visited, #burgerLayer2:link, #burgerLayer2:visited { /*Properties for all links*/
+    opacity: 0;
+    color:white;
+    text-decoration: none;
+}
+#standardLink:hover, #standardLink:active, #burgerX em:hover, #burgerLayer:hover{color:#9E9E9E;} /*Properties for the white, right-hand links*/
+
+#leftLink:hover, #leftLink:active, #burgerLayer2:hover, #burgerLayer2:active { /*Properties for the left-hand link*/
+    color: rgba(184, 0, 0, 1);
+    text-shadow: 0 0 8px black;
+}
+#buttonLink:link, #buttonLink:visited { /*Properties for the button link*/
+    background-color: rgba(184, 0, 0, 1);
+    box-shadow: 2px 2px 2px rgba(150, 0, 0, 1);
+    padding: 10px 16px;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    animation: fadeInAnimation ease-in-out 0.5s;
+    animation-delay: 0.6s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+  }
+  #buttonLink:hover, #buttonLink:active, #hamburgerButton:hover, #hamburgerButton:active{ /*Properties for the button link*/
+    background-color: #ee0000;
+    box-shadow: 2px 2px 2px rgb(187, 0, 0);
+}
+.videoWrapperWrapper { /*Properties for the video wrapper, wrapper (for consistent animation)*/
+    opacity: 0;
+    animation: fadeInAnimationVWW ease-in 0.2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+.videoWrapper { /*Properties for the video wrapper*/
+    width:100%;
+    max-width: 1920px;
+    height: 1080px;
+    max-height: 1080px;
+    position: absolute;
+    top: -250px; /*change this value to change the vertical center-point position of the banner video*/
+    left: -4px;
+    overflow: hidden;
+  }
+#bannerVid{ /*Properties for the video*/
+    width:104%;
+    height:1080px;
+    min-width: 580px;
+    max-width:1920px;
+    max-height:1080px;
+    outline:none;
+    display:block;
+    pointer-events:none;
+    overflow: hidden;
+    z-index:-10
+}
+.videoBottomBlocker{ /*Hides the youtube logo and progress bar at the bottom*/
+    width:104%;
+    height:500px;
+    position: absolute;
+    top: 800px;
+    background: black;
+    z-index: 0;
+}
+.videoFocus{ /*Properties for the oval contrast focus*/
+    width:100%;
+    height:575px;
+    position: absolute;
+    top: 250px;
+    margin:auto;
+    background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+.videoBottomFader{ /*Properties for the horizontal gradient below the video*/
+    width:104%;
+    height:30px;
+    position: absolute;
+    top: 770px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+@media only screen and (max-width: 1120px) { /*Changes what appears when the window shrinks horizontally*/
+    .links {display: none;} /*Hides the right-hand links and button link*/        
+    #hamburgerButton, #hamburgerButtonSpacer {display:inline-block;} /*Displays the hamburger button and the spacer*/
+}
+@media only screen and (min-width: 1121px) { /*Changes what appears when the window expands horizontally*/
+    #hamburgerButton, #hamburgerButtonSpacer, #burgerMenu {display: none;} /*Hides the hamburger button and spacer*/ 
+    #burgerMenuReplacementSpacer {display: block;}
+}
