@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url("wallpaper.jpg") no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+            color: #111;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.85); /* semi-transparent panel */
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.3);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+            header img {
+                height: 60px; /* adjust logo size */
+                margin-right: 15px;
+            }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .doc-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 columns */
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+        }
+
+            .doc-list li {
+                background: #fff;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .doc-list a {
+                text-decoration: none;
+                color: #2563eb;
+                font-weight: 600;
+            }
+
+                .doc-list a:hover {
+                    text-decoration: underline;
+                }
+
+        .filetype {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 700px) {
+            .doc-list {
+                grid-template-columns: 1fr; /* fallback to 1 column on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../logo/larme_logo.png" alt="Website Logo">
+            <h1>📚 Document Library</h1>
+        </header>
+
+        <ul class="doc-list">
+            <li>
+                <a href="../../../docs/Nextone_eng03.pdf" target="_blank">Nextone</a>
+                <span class="filetype">PDF</span>
+            </li>
+            <li>
+                <a href="../../../docs/xswireless_en_0212-1755942507861.docx" target="_blank">Wireless Guide</a>
+                <span class="filetype">DOCX</span>
+            </li>
+            <li>
+                <a href="docs/black_diamond_contract.pdf" target="_blank">Booking Contract</a>
+                <span class="filetype">PDF</span>
+            </li>
+            <li>
+                <a href="Black_Diamond_contract.html" target="_blank">contract</a>
+                <span class="filetype">HTML</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

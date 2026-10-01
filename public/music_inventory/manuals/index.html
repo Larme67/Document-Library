@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            
+                <a id="centerLink" href="music_inventory/index.html" class="centerLink">Home</a> <!--The left logo is handled separately-->
+            
+            <h1 class="title">📚 Document Library</h1>
+        </header><br >
+
+        <!-- Upload Section -->
+        <section class="upload-section">
+            <div id="dropZone" class="drop-zone">
+                Drag & drop files here <br>or click to select
+            </div><br>
+            <input type="file" id="fileInput" name="file" multiple hidden>
+            <button id="uploadBtn">Upload Selected Files</button>
+            <p class="instructions">All files are saved in the <strong>docs/</strong> folder on the server.</p>
+        </section>
+
+        <!-- Search -->
+        <input id="search" type="search" placeholder="Search documents…">
+
+        <!-- Document List -->
+        <ul id="docList" class="doc-list"></ul>
+
+        <template id="row">
+            <li class="doc-item">
+                <div class="meta">
+                    <a class="doc-link"></a>
+                    <div class="details">
+                        <span class="badge ext"></span>
+                        <span class="muted size"></span>
+                        <span class="muted sep">•</span>
+                        <span class="muted updated"></span>
+                    </div>
+                </div>
+                <div class="actions">
+                    <a class="open">Open</a>
+                    <button class="delete">Delete</button>
+                </div>
+            </li>
+        </template>
+
+        <!-- Document preview -->
+        <div id="preview">
+            <iframe id="docFrame" style="width:100%; height:600px;" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
