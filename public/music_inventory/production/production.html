@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Music Library</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome/css/bootstrap/dist/css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="../font/fontawesome/css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="styles.css"><!--the playlist styles sheet-->
+
+</head>
+<body>
+
+    <!-- menu start-->
+
+    <nav class="navbarMenu">
+        <div class="navContainer" id="">
+            <ul class="custom_menu">
+                <li><a href="../index.html" class="menu-item">Home</a></li>
+                <li><a href="../video/videoindex.html" class="menu-item">Performance Video's</a></li>
+                <li><a href="../../document-library/public/index.html" class="menu-item">My Productions</a></li>
+            </ul>
+            <div class="menu_button">
+                <a href="#" class="add_to_book"><i class="fas fa-plus-circle"></i>Add New Tracks</a>
+                <a href="#" class="edit_profile"><i class="fas fa-pen"></i>Edit Tracks</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- menu end-->
+    <!-- start of tracks -->
+    <div class="grid">
+        <!-- Album 1 -->
+        <div class="card" role="region" aria-label="Album Player">
+            <header>
+                <div class="cover"><img src="images/cd_cover.jpg" width="75px" height="75px" /></div>
+                <div class="artist">Artist: Justbe</div>
+                <h1>Album: Justbe you</h1>
+            </header>
+
+            <div class="controls">
+                <button class="play-toggle" aria-label="Play/Pause">▶</button>
+                <div class="bar"><div></div></div>
+            </div>
+            <audio preload="metadata"></audio>
+            <div class="playlist">
+                <div class="track" data-title="JustBe you" data-src="audio/justbe/justbe-you.wav">
+                    <div class="title">JustBe you</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Sisterhood" data-src="audio/justbe/sisterhood.wav">
+                    <div class="title">Sisterhood</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="I really love you" data-src="audio/justbe/i-really-love-you.wav">
+                    <div class="title">I really love you</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Friends &amp; Family" data-src="audio/justbe/friends-and-family.wav">
+                    <div class="title">Friends &amp; Family</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="You got a friend" data-src="audio/justbe/you-got-a-friend.wav">
+                    <div class="title">You got a friend</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="There for each other" data-src="audio/justbe/there-for-each-other.wav">
+                    <div class="title">There for each other</div>
+                    <div class="duration">–:–</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Album 2 -->
+        <div class="card" role="region" aria-label="Album Player">
+            <header>
+                <div class="cover"><img src="images/keith-parker.jpg" width="75px" height="75px" /></div>
+                <div class="artist">Artist: Keith Parker</div>
+                <h1>Album: I did it my way</h1>
+            </header>
+
+            <div class="controls">
+                <button class="play-toggle" aria-label="Play/Pause">▶</button>
+                <div class="bar"><div></div></div>
+            </div>
+            <audio preload="metadata"></audio>
+            <div class="playlist">
+                <div class="track" data-title="And I Love you so" data-src="audio/Keith_Parker/I-did-it-My-way/and-i-love-you-so.wav">
+                    <div class="title">And I Love you so</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Can't help falling in Love" data-src="audio/Keith_Parker/I-did-it-My-way/can't-help-falling-in-love.wav">
+                    <div class="title">Can't help falling in Love</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Endless Love" data-src="audio/Keith_Parker/I-did-it-My-way/endless-love.wav">
+                    <div class="title">Endless Love</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="My Way" data-src="audio/Keith_Parker/I-did-it-My-way/my-way.wav">
+                    <div class="title">My Way</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Three times a Lady" data-src="audio/Keith_Parker/I-did-it-My-way/three-times-a-lady.wav">
+                    <div class="title">Three times a Lady</div>
+                    <div class="duration">–:–</div>
+                </div>
+            </div>
+        </div>
+        <!-- Album 3 -->
+        <div class="card" role="region" aria-label="Album Player">
+            <header>
+                <div class="cover"><img src="images/img_0288.png" width="75px" height="75px" /></div>
+                <div class="artist">Artist: Ray Lewis</div>
+                <h1>Album: Because He Lives</h1>
+            </header>
+
+            <div class="controls">
+                <button class="play-toggle" aria-label="Play/Pause">▶</button>
+                <div class="bar"><div></div></div>
+            </div>
+            <audio preload="metadata"></audio>
+            <div class="playlist">
+                <div class="track" data-title="Because he lives" data-src="audio/Because-he-lives/Because-he-lives.m4a">
+                    <div class="title">Because he lives</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Because he lives Reggae Mix" data-src="audio/Because-he-lives/Because_he_Lives_(Vique_Reggae_Mix).m4a">
+                    <div class="title">Because he Lives (Vique Reggae Mix)</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Because he Lives RnB Mix" data-src="audio/Because-he-lives/Because_he_Lives_(Vique_RnB_Mix).mp3">
+                    <div class="title">Because he Lives (Vique RnB Mix)</div>
+                    <div class="duration">–:–</div>
+                </div>
+            </div>
+        </div>
+        <!-- /div -->
+        <!-- div class="grid" -->
+        <!-- Album 4 -->
+        <div class="card" role="region" aria-label="Album Player">
+            <header>
+                <div class="cover"><img src="images/img_0288.png" width="75px" height="75px" /></div>
+                <div class="artist">Artist: Larme</div>
+                <h1>Album: My Jam</h1>
+            </header>
+
+            <div class="controls">
+                <button class="play-toggle" aria-label="Play/Pause">▶</button>
+                <div class="bar"><div></div></div>
+            </div>
+            <audio preload="metadata"></audio>
+            <div class="playlist">
+                <div class="track" data-title="Florida mist" data-src="audio/larme/Florida-mist.mp3">
+                    <div class="title">Florida mist</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Groove19" data-src="audio/larme/Groove19.mp3">
+                    <div class="title">Groove19</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Calm serenity" data-src="audio/larme/Calm-serenity.mp3">
+                    <div class="title">Calm serenity</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Close to Thee" data-src="audio/larme/Close-to-Thee.mp3">
+                    <div class="title">Close to Thee.mp3</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Hold-on" data-src="audio/larme/Hold-on.mp3">
+                    <div class="title">Hold on</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Loving-you" data-src="audio/larme/Loving-you.mp3">
+                    <div class="title">Loving-you</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="My life" data-src="audio/larme/My-life.mp3">
+                    <div class="title">My life</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="real life" data-src="audio/larme/real-life.mp3">
+                    <div class="title">real life</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="standing tall" data-src="audio/larme/standing-tall.mp3">
+                    <div class="title">standing tall</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Thank you" data-src="audio/larme/Thank-you.mp3">
+                    <div class="title">Thank you</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="There for each other" data-src="audio/larme/There-for-each-other.mp3">
+                    <div class="title">There for each other</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="This Feeling" data-src="audio/larme/This-Feeling.mp3">
+                    <div class="title">This Feeling</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Wherever I go" data-src="audio/larme/Wherever-I-go.mp3">
+                    <div class="title">Wherever I go</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="you and Me" data-src="audio/larme/you-and-Me.mp3">
+                    <div class="title">you and Me</div>
+                    <div class="duration">–:–</div>
+                </div>
+            </div>
+        </div>
+        <!-- Album 5 -->
+        <div class="card" role="region" aria-label="Album Player">
+            <header>
+                <div class="cover"><img src="images/img_0288.png" width="75px" height="75px" /></div>
+                <div class="artist">Artist: Youth Project</div>
+                <h1>Album: know your friends</h1>
+            </header>
+
+            <div class="controls">
+                <button class="play-toggle" aria-label="Play/Pause">▶</button>
+                <div class="bar"><div></div></div>
+            </div>
+            <audio preload="metadata"></audio>
+            <div class="playlist">
+                <div class="track" data-title="know your friends" data-src="audio/youth_project/know-your-friends/know-your-friend.mp3">
+                    <div class="title">know your friends</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="I didn't do it" data-src="audio/youth_project/know-your-friends/I-didn't-do-it.mp3">
+                    <div class="title">I didn't do it</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="I should of gone home" data-src="audio/youth_project/know-your-friends/I-should-of-gone-home.mp3">
+                    <div class="title">I should of gone home</div>
+                    <div class="duration">–:–</div>
+                </div>
+            </div>
+        </div>
+        <!-- Album 6 -->
+        <div class="card" role="region" aria-label="Album Player">
+            <header>
+                <div class="cover"><img src="images/tootingsingers.jpg" width="75px" height="75px" /></div>
+                <div class="artist">Artist: Tooting Worship Team</div>
+                <h1>Album: The love of God</h1>
+            </header>
+
+            <div class="controls">
+                <button class="play-toggle" aria-label="Play/Pause">▶</button>
+                <div class="bar"><div></div></div>
+            </div>
+            <audio preload="metadata"></audio>
+            <div class="playlist">
+                <div class="track" data-title="He Touch Me" data-src="audio/tooting Worship team/He-Touch-Me.mp3">
+                    <div class="title">He Touch Me</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Just a Closer walk" data-src="audio/tooting Worship team/Just-a-Closer-walk.mp3">
+                    <div class="title">Just a Closer walk</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Just as I am" data-src="audio/tooting Worship team/Just-as-I-am.mp3">
+                    <div class="title">Just as I am</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="old Rugged Cross" data-src="audio/tooting Worship team/old-Rugged-Cross.mp3">
+                    <div class="title">old Rugged Cross.mp3</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Softly Tenderly" data-src="audio/tooting Worship team/Softly-Tenderly.mp3">
+                    <div class="title">Softly Tenderly</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Sweet hour of prayer" data-src="audio/tooting Worship team/Sweet-hour-of-prayer.mp3">
+                    <div class="title">Sweet hour of prayer</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="The love of God" data-src="audio/tooting Worship team/The-love-of-God.mp3">
+                    <div class="title">The love of God</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Tis so Sweet" data-src="audio/tooting Worship team/Tis-so-Sweet.mp3">
+                    <div class="title">Tis so Sweet</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="When we all get to heaven" data-src="audio/tooting Worship team/When-we-all-get-to-heaven.mp3">
+                    <div class="title">When we all get to heaven</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Where he Leads me" data-src="audio/tooting Worship team/Where-he-Leads-me.mp3">
+                    <div class="title">Where he Leads me</div>
+                    <div class="duration">–:–</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /div -->
+        <!-- div class="grid" -->
+        <!-- Album 7 -->
+        <div class="card" role="region" aria-label="Album Player">
+            <header>
+                <div class="cover"><img src="images/floydmillen.jpg" width="75px" height="75px" /></div>
+                <div class="artist">Artist: Floyd Millen</div>
+                <h1>Album: Sax Man</h1>
+            </header>
+
+            <div class="controls">
+                <button class="play-toggle" aria-label="Play/Pause">▶</button>
+                <div class="bar"><div></div></div>
+            </div>
+            <audio preload="metadata"></audio>
+            <div class="playlist">
+                <div class="track" data-title="Ain't No sunshine" data-src="audio/floyd-millen/Ain't No sunshine.mov">
+                    <div class="title">Ain't No sunshine</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Great is thy Faithfulness" data-src="audio/floyd-millen/Great is thy Faithfulness.mov">
+                    <div class="title">Great is thy Faithfulness</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Always and forever" data-src="audio/floyd-millen/Always and forever.mov">
+                    <div class="title">Always and forever</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="#" data-src="#">
+                    <div class="title">#</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="#" data-src="#">
+                    <div class="title">#</div>
+                    <div class="duration">–:–</div>
+                </div>
+            </div>
+        </div>
+        <!-- Album 8 -->
+        <div class="card" role="region" aria-label="Album Player">
+            <header>
+                <div class="cover"><img src="images/img_0288.png" width="75px" height="75px" /></div>
+                <div class="artist">Artist: Edirisinghe Kids</div>
+                <h1>Album: Family kids</h1>
+            </header>
+
+            <div class="controls">
+                <button class="play-toggle" aria-label="Play/Pause">▶</button>
+                <div class="bar"><div></div></div>
+            </div>
+            <audio preload="metadata"></audio>
+            <div class="playlist">
+                <div class="track" data-title="I dreamed a dream" data-src="audio/edirisinghe-kids/I dreamed a dream.mp3">
+                    <div class="title">I dreamed a dream - Kathryn</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Memories" data-src="audio/edirisinghe-kids/The way we were.mp3">
+                    <div class="title">Memories - Kathryn</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Wildest dream" data-src="audio/edirisinghe-kids/wildest dream.mp3">
+                    <div class="title">Wildest dream -Shannon and Gaby</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Alison Victory" data-src="audio/edirisinghe-kids/Alison Victory.mp3">
+                    <div class="title">Alison Victory - Alison</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Dancing Queen" data-src="audio/edirisinghe-kids/Dancing Queen.mp3">
+                    <div class="title">Dancing Queen - Lily</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="mummy's song" data-src="audio/edirisinghe-kids/mummy's song.mp3">
+                    <div class="title">Mummy's song</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="alison" data-src="audio/edirisinghe-kids/alison.mp3">
+                    <div class="title">alison - Alison</div>
+                    <div class="duration">–:–</div>
+                </div>
+            </div>
+        </div>
+        <!-- Album 9 -->
+        <div class="card" role="region" aria-label="Album Player">
+            <header>
+                <div class="cover"><img src="images/larmondsisters.jpg" width="75px" height="75px" /></div>
+                <div class="artist">Artist: Larmond Sisters</div>
+                <h1>Larmond Sisters</h1>
+            </header>
+
+            <div class="controls">
+                <button class="play-toggle" aria-label="Play/Pause">▶</button>
+                <div class="bar"><div></div></div>
+            </div>
+
+            <audio preload="metadata"></audio>
+
+            <div class="playlist">
+                <div class="track" data-title="Take my Hand" data-src="audio/larmond-sisters/Take my Hand.mp3">
+                    <div class="title">Take my Hand</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="The Love of God" data-src="audio/larmond-sisters/The Love of God.mp3">
+                    <div class="title">The Love of God</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="My life" data-src="audio/larmond-sisters/My life.mp3">
+                    <div class="title">My life</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="it is well" data-src="audio/larmond-sisters/it is well.mp3">
+                    <div class="title">it is well</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Softly Tenderly" data-src="audio/larmond-sisters/">
+                    <div class="title">#</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Sweet hour of prayer" data-src="audio/larmond-sisters/">
+                    <div class="title">#</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="The love of God" data-src="audio/larmond-sisters/">
+                    <div class="title">#</div>
+                    <div class="duration">–:–</div>
+                </div>
+            </div>
+        </div>
+        <!-- Album 10 -->
+        <div class="card" role="region" aria-label="Album Player">
+            <header>
+                <div class="cover"><img src="images/how great thou art.jpg" width="75px" height="75px"></div>
+                <div class="artist">Artist: Celebrate our Seniors</div>
+                <h1>Album: How great thou art</h1>
+            </header>
+
+            <div class="controls">
+                <button class="play-toggle" aria-label="Play/Pause">▶</button>
+                <div class="bar"><div></div></div>
+            </div>
+            <audio preload="metadata"></audio>
+            <div class="playlist">
+                <div class="track" data-title="Many things about tomorrow" data-src="audio/seniors/1.Many things about tomorrow.mp3">
+                    <div class="title">Many things about tomorrow</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Don't take my burden" data-src="audio/seniors/2. Don't take my burden.mp3">
+                    <div class="title">Don't take my burden</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Tis so sweet" data-src="audio/seniors/3. Tis so sweet.mp3">
+                    <div class="title">Tis so sweet</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="It is well" data-src="audio/seniors/4. It is well.mp3">
+                    <div class="title">It is well</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="He'll understand and say well done" data-src="audio/seniors/5. He'll understand and say well done.mp3">
+                    <div class="title">He'll understand and say well done</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="How great thou art" data-src="audio/seniors/6. How great thou art.mp3">
+                    <div class="title">How great thou art</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Since I met Jesus" data-src="audio/seniors/7. Since I met Jesus.mp3">
+                    <div class="title">Since I met Jesus</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Because he lives" data-src="audio/seniors/8. Because he lives.mp3">
+                    <div class="title">Because he lives</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="I must tell Jesus" data-src="audio/seniors/9. I must tell Jesus.mp3">
+                    <div class="title">I must tell Jesus</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="There was one" data-src="audio/seniors/10. There was one.mp3">
+                    <div class="title">There was one</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="The signs by the side of the road" data-src="audio/seniors/11. The signs by the side of the road.mp3">
+                    <div class="title">The signs by the side of the road</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="While I'm down here" data-src="audio/seniors/12. While I'm down here.mp3">
+                    <div class="title">While I'm down here</div>
+                    <div class="duration">–:–</div>
+                </div>
+            </div>
+        </div>
+        <!-- Album 11 -->
+        <div class="card" role="region" aria-label="Album Player">
+            <header>
+                <div class="cover"><img src="images/aldinyoung.jpg" width="75px" height="75px" /></div>
+                <div class="artist">Artist: Aldin Young</div>
+                <h1>Album: Aldin Young</h1>
+            </header>
+
+            <div class="controls">
+                <button class="play-toggle" aria-label="Play/Pause">▶</button>
+                <div class="bar"><div></div></div>
+            </div>
+            <audio preload="metadata"></audio>
+            <div class="playlist">
+                <div class="track" data-title="All is well" data-src="audio/aldin-young/All is well.mp3">
+                    <div class="title">All is well</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Almighty redeemer" data-src="audio/aldin-young/Almighty redeemer.mp3">
+                    <div class="title">Almighty redeemer</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Here I stand" data-src="audio/aldin-young/Here I stand.mp3">
+                    <div class="title">Here I stand</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="How I Long" data-src="audio/aldin-young/How I Long.mp3">
+                    <div class="title">How I Long</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="I do" data-src="audio/aldin-young/I do.mp3">
+                    <div class="title">I do</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Jesus is Mine" data-src="audio/aldin-young/Jesus is Mine.mp3">
+                    <div class="title">Jesus is Mine</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Just carry on" data-src="audio/aldin-young/Just carry on.mp3">
+                    <div class="title">Just carry on</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Praise him" data-src="audio/aldin-young/Praise him.mp3">
+                    <div class="title">Praise him</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Since I met you" data-src="audio/aldin-young/Since I met you.mp3">
+                    <div class="title">Since I met you</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="This heart of mine" data-src="audio/aldin-young/This heart of mine.mp3">
+                    <div class="title">This heart of mine</div>
+                    <div class="duration">–:–</div>
+                </div>
+            </div>
+        </div>
+        <!-- Album 12 -->
+        <div class="card" role="region" aria-label="Album Player">
+            <header>
+                <div class="cover"><img src="images/img_0288.png" width="75px" height="75px" /></div>
+                <div class="artist">Artist: Larme Works</div>
+                <h1>Album: Productions</h1>
+            </header>
+
+            <div class="controls">
+                <button class="play-toggle" aria-label="Play/Pause">▶</button>
+                <div class="bar"><div></div></div>
+            </div>
+            <audio preload="metadata"></audio>
+            <div class="playlist">
+                <div class="track" data-title="jesus Loves me_Dejunta" data-src="audio/larme-works/Dejunta 2013/jesus Loves me_Dejunta.mp3">
+                    <div class="title">jesus Loves me - Dejunta</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="You were meant for me" data-src="audio/larme-works/Nigel-smith/You were meant for me.mp3">
+                    <div class="title"> You were meant for me - Nigel smith</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Amazed" data-src="audio/larme-works/Michelle-raymond/Amazed.mp3">
+                    <div class="title">Amazed - Michelle raymond</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="holy" data-src="audio/larme-works/Stef-risden/holy.mp3">
+                    <div class="title">Holy - Stef risden</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Darling  i Love you" data-src="audio/larme-works/carmen-wiltshire/Darling  i Love you.mp3">
+                    <div class="title">Darling  i Love you - carmen wiltshire</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Real people" data-src="audio/larme-works/born-preacher/Real people.mp3">
+                    <div class="title">Real people - born preacher</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="by the spirit_ragga" data-src="audio/larme-works/ken/by the spirit_ragga.mp3">
+                    <div class="title">by the spirit_ragga - ken</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Hey you" data-src="audio/larme-works/ken/Hey you_mix2.mp3">
+                    <div class="title">Hey You - ken</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Hey You_mix2" data-src="audio/larme-works/ken/Hey You remix.mp3">
+                    <div class="title">Hey You remix - ken</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="i love you" data-src="audio/larme-works/ken/i love you.mp3">
+                    <div class="title">I love you - ken</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="#'" data-src="audio/larme-works/mummy's song.mp3">
+                    <div class="title">#' </div>
+                    <div class="duration">–:–</div>
+                </div>
+            </div>
+     </div>
+        <!-- End of tracks -->
+        <!-- Album 13 -->
+        <!-- div class="card" role="region" aria-label="Album Player">
+            <header>
+                <div class="cover"></div>
+                <div class="artist">Artist: Carmen Wiltshire</div>
+                <h1>Album: Darlin I love you</h1>
+            </header>
+
+            <div class="controls">
+                <button class="play-toggle" aria-label="Play/Pause">▶</button>
+                <div class="bar"><div></div></div>
+            </div>
+
+            <audio preload="metadata"></audio>
+
+            <div class="playlist">
+                <div class="track" data-title="jesus Loves me_Dejunta" data-src="audio/larme-works/carmen-wiltshire/jesus Loves me_Dejunta.mp3">
+                    <div class="title">jesus Loves me</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="You were meant for me" data-src="audio/larme-works/carmen-wiltshire/You were meant for me.mp3">
+                    <div class="title"> You were meant for me</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Amazed" data-src="audio/larme-works/carmen-wiltshire/Amazed.mp3">
+                    <div class="title">Amazed</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="holy" data-src="audio/larme-works/carmen-wiltshire/holy.mp3">
+                    <div class="title">Holy</div>
+                    <div class="duration">–:–</div>
+                </div>
+                <div class="track" data-title="Darling  i Love you" data-src="audio/larme-works/carmen-wiltshire/Darling  i Love you.mp3">
+                    <div class="title">Darling  i Love you</div>
+                    <div class="duration">–:–</div>
+                </div>
+                </div>
+         </div -->
+     </div -->
+        <!--playlist-->
+        <script src="script.js"></script>
+
+        <!-- jQuery js -->
+        <script src="../js/jquery-3.6.0.min.js"></script>
+
+        <!-- bootstrap js -->
+        <script src="../js/bootstrap.bundle.min.js"></script>
+
+        <!-- Custom js -->
+        <script src="../js/script.js"></script>
+
+</body>
+</html>
