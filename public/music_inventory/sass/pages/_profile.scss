@@ -1,0 +1,143 @@
+
+
+.profile-banner{
+    background-image: linear-gradient(#acceed, #ffffff);
+    // max-height: 85vh;
+    box-shadow: $login_box_shadow_light;
+
+    hr{
+        margin: 0;
+    }
+
+    &__container{
+        max-width: $signup_login_width;
+        margin: auto;
+       
+
+        .profile__cover{
+            background: url(../images/cover.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-height: 35rem;
+            border-radius: 0 0 8px 8px;
+            position: relative;
+
+            img{
+                // max-width: 100%;
+
+                height: 100%;
+            }
+            .photo{
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%,-90%);
+
+                .profile_image{
+                    width: 17rem;
+                    height: 17rem;
+                    border-radius: 50%; 
+                    border: 5px solid #fff;
+                    cursor: pointer;
+                    transition: all .3s;
+                    overflow: hidden;
+                    box-shadow: inset 0 0 2px #bbc0ce;
+                    // position: relative;
+                      
+                    img{
+                        width: 100%;
+ 
+                    } 
+                   
+                }
+                input{ 
+                    display: none;
+                    
+                }
+                label{
+                    
+
+                    i{
+                        font-size: 20px;
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        background: #e4e6eb;
+                        // line-height: 50px;
+                        // text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        transition: all .2s;
+
+                        position: absolute;
+                        top: 100%;
+                        left: 100%;
+                   
+                    transform: translate(-100%,-100%);
+
+                        &:hover{
+                            background: #bbc0ce;
+                        }
+                    }
+                }
+            }
+            .cover_upload{
+                background: #e9ebf0;
+                padding: 5px 10px;
+                border-radius: 5px;
+                position: absolute;
+                right: 3%;
+                bottom: 3%;
+                
+                input{
+                    display: none;
+                }
+                label{
+                    cursor: pointer; 
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .cover_photo_icon{
+                        i{
+                            font-size: 20px;
+                            margin-right: 5px;
+                        }
+                    }
+                    .cover_photo_text{
+                        margin-bottom: 2px;
+                    }
+                }
+            }
+        }
+
+        .profile_text{
+            text-align: center;
+            padding: 22px 0 10px;
+            .name{
+                font-size: 30px;
+                color: #000;
+                font-weight: 700;
+
+            }
+            .bio{
+                color: #6D6F73;
+            }
+        }
+    }
+}
+
+
+// Main content section start
+.main_content{
+    margin: 20px 0;
+    .main_container{
+        max-width: $main_content_width;
+        margin: 0 auto;
+ 
+    }
+}
+// Main content section end
+ 
